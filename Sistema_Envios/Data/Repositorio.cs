@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -65,6 +66,7 @@ namespace Sistema_Envios.Data
             }
             return filasAfectadas;
         }
+
         public static response EjecutarProcedimiento(string ProcedureName, List<Parametro> Parametros, string conexion = "")
         {
             try
@@ -114,7 +116,7 @@ namespace Sistema_Envios.Data
                             }
 
                             // Devolver una respuesta exitosa con los datos
-                            return new response(true, "Procedimiento ejecutado correctamente", result);
+                            return new response(true, "Registro Exitoso", result);
                         }
                     }
                 }
@@ -155,6 +157,55 @@ namespace Sistema_Envios.Data
             }
 
             return lista;
+        }
+        public T GetById<T>(string consulta, int id) where T : class, new()
+        {
+            // Cadena de conexión
+            string connectionString = "Data Source=LAPMAX;Initial Catalog=ENVIOS_DB;Integrated Security=True";
+
+            // Crear un objeto del modelo T que devolveremos
+            T resultado = new T();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                // Crear el comando SQL
+                SqlCommand command = new SqlCommand(consulta, _conexion.AbrirConexion());
+                // Agregar el parámetro ID
+                command.Parameters.AddWithValue("@ID", id);
+
+                try
+                {
+                    // Abrir la conexión
+                    connection.Open();
+
+                    // Ejecutar el comando y obtener los resultados
+                    SqlDataReader reader = command.ExecuteReader();
+
+                    // Si la consulta devuelve al menos una fila, mapear los resultados al modelo
+                    if (reader.Read())
+                    {
+                        // Utilizamos reflexión para mapear los datos del reader a las propiedades del modelo
+                        foreach (var prop in typeof(T).GetProperties())
+                        {
+                            // Si la columna en el DataReader tiene el mismo nombre que la propiedad, asignar el valor
+                            if (reader[prop.Name] != DBNull.Value)
+                            {
+                                prop.SetValue(resultado, Convert.ChangeType(reader[prop.Name], prop.PropertyType));
+                            }
+                        }
+                    }
+
+                    // Cerrar el reader
+                    reader.Close();
+                }
+                catch (Exception ex)
+                {
+                    // Manejar cualquier error (por ejemplo, conexión fallida, consulta mal escrita, etc.)
+                    MessageBox.Show("Error al obtener los datos: " + ex.Message);
+                }
+            }
+
+            return resultado; // Regresar el modelo con los datos obtenidos
         }
     }
 }

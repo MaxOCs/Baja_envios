@@ -13,3 +13,4 @@ C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envi
 C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.FomularioProductos.resources
 C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\bin\Debug\FontAwesome.Sharp.dll
 C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envios.csproj.CopyComplete
+C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.ModalesProductos.ModalEditarProducto.resources
