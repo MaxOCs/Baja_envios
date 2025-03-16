@@ -56,6 +56,7 @@ namespace Sistema_Envios.Views
             this.txtNombreProducto = new Sistema_Envios.Componentes.RJTextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCatalogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -402,12 +403,37 @@ namespace Sistema_Envios.Views
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.BtnEliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnEliminar.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnEliminar.FlatAppearance.BorderSize = 2;
+            this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnEliminar.IconChar = FontAwesome.Sharp.IconChar.Trash;
+            this.BtnEliminar.IconColor = System.Drawing.Color.White;
+            this.BtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnEliminar.IconSize = 27;
+            this.BtnEliminar.Location = new System.Drawing.Point(409, 54);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.BtnEliminar.Size = new System.Drawing.Size(150, 39);
+            this.BtnEliminar.TabIndex = 21;
+            this.BtnEliminar.Text = "Eliminar";
+            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
             // FomularioProductos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(727, 610);
+            this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
@@ -449,5 +475,6 @@ namespace Sistema_Envios.Views
         private Componentes.RJTextBox txtNombreProducto;
         private Label label5;
         private FontAwesome.Sharp.IconButton btnEditar;
+        private FontAwesome.Sharp.IconButton BtnEliminar;
     }
 }

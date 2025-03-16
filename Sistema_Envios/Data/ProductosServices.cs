@@ -25,5 +25,7 @@ namespace Sistema_Envios.Data
             Producto producto = repo.GetById<Producto>(consulta, idProducto);
             return producto;
         }
+
+        
     }
 }

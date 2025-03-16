@@ -184,5 +184,47 @@ namespace Sistema_Envios.Views
                 MessageBox.Show("Por favor, seleccione una celda para editar.");
             }
         }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+            // Mostrar el cuadro de mensaje con las opciones "Sí" y "No"
+            DialogResult resultado = MessageBox.Show("¿Está seguro de eliminar este producto?",
+                                                     "Confirmación de eliminación",
+                                                     MessageBoxButtons.YesNo,
+                                                     MessageBoxIcon.Question);
+
+            // Si el usuario hace clic en "Sí", ejecutamos la acción de eliminar
+            if (resultado == DialogResult.Yes)
+            {
+                if (dgvProductosCatalogo.SelectedCells.Count > 0)
+                {
+                    DataGridViewCell selectedCell = dgvProductosCatalogo.SelectedCells[0];
+
+                    int rowIndex = selectedCell.RowIndex;
+
+                    var producto = (Producto)dgvProductosCatalogo.Rows[rowIndex].Tag;
+
+                    // Verifica si el producto fue encontrado
+                    if (producto != null)
+                    {
+                        EliminarProducto(producto.ID_Producto);
+                        CargarProductos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el producto.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione una celda para editar.");
+                }
+            }
+        }
+
+        public void EliminarProducto(int id)
+        {
+            Producto.EliminarProducto(id);
+        }
     }
 }

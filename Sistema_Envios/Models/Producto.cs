@@ -49,6 +49,16 @@ namespace Sistema_Envios.Models
             // Llamar a la función Ejecutar para ejecutar el procedimiento almacenado
             return Repositorio.EjecutarProcedimiento("ActualizarProducto", parametros);
         }
+
+        public static response EliminarProducto(int ID_Producto)
+        {
+            var parametros = new List<Parametro>
+            {
+                new Parametro("@ID_Producto",ID_Producto, SqlDbType.Int),
+            };
+
+            return Repositorio.EjecutarProcedimiento("EliminarProducto", parametros);
+        }
     }
 
     
