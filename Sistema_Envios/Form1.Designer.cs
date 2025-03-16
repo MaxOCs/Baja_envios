@@ -41,8 +41,8 @@
             this.PanelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panelChildForm = new System.Windows.Forms.Panel();
             this.labelNameDev = new System.Windows.Forms.Label();
+            this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelMenu.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.PanelLogo.SuspendLayout();
@@ -165,6 +165,7 @@
             this.BtnPedidos.Text = "Pedidos";
             this.BtnPedidos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnPedidos.UseVisualStyleBackColor = false;
+            this.BtnPedidos.Click += new System.EventHandler(this.BtnPedidos_Click);
             // 
             // btnEnvios
             // 
@@ -216,15 +217,6 @@
             this.panel2.Size = new System.Drawing.Size(1014, 30);
             this.panel2.TabIndex = 5;
             // 
-            // panelChildForm
-            // 
-            this.panelChildForm.BackColor = System.Drawing.Color.LightGray;
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1014, 651);
-            this.panelChildForm.TabIndex = 6;
-            // 
             // labelNameDev
             // 
             this.labelNameDev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -236,6 +228,15 @@
             this.labelNameDev.Size = new System.Drawing.Size(167, 20);
             this.labelNameDev.TabIndex = 0;
             this.labelNameDev.Text = "Maximiliano Ortiz 2025";
+            // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.LightGray;
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(1014, 651);
+            this.panelChildForm.TabIndex = 6;
             // 
             // Form1
             // 

@@ -21,40 +21,12 @@ namespace Sistema_Envios
             InitializeComponent();
         }
 
-        private void btnCrearDB_Click(object sender, EventArgs e)
-        {
-            string mensaje = creardb.CrearBaseDeDatos();
-            MessageBox.Show(mensaje, "resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void btnCreateTables_Click(object sender, EventArgs e)
-        {
-            string mensaje = creardb.CreateTable();
-            MessageBox.Show(mensaje, "resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string mensaje = creardb.insertData();
-            MessageBox.Show(mensaje, "resultado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-      
-
-        private void panelLogo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void rjButton4_Click(object sender, EventArgs e)
-        {
 
-        }
         private Form activeForm = null; 
         private void openChildForm(Form ChildForm)
         {
@@ -73,6 +45,11 @@ namespace Sistema_Envios
         private void BtnProducts_Click_1(object sender, EventArgs e)
         {
             openChildForm(new FomularioProductos());
+        }
+
+        private void BtnPedidos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Crud_Pedidos());
         }
     }
 }

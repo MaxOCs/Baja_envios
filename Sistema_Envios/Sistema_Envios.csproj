@@ -40,6 +40,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -84,17 +85,29 @@
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\Crud_Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud_Pedidos.Designer.cs">
+      <DependentUpon>Crud_Pedidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FomularioProductos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\FomularioProductos.Designer.cs">
       <DependentUpon>FomularioProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ModalesProductos\ModalEditarProducto.cs">
+    <Compile Include="Views\Modales\ModalEditarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ModalesProductos\ModalEditarProducto.Designer.cs">
+    <Compile Include="Views\Modales\ModalEditarProducto.Designer.cs">
       <DependentUpon>ModalEditarProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modales\ModalRegistrarPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modales\ModalRegistrarPedido.Designer.cs">
+      <DependentUpon>ModalRegistrarPedido.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Componentes\RJTextBox.resx">
       <DependentUpon>RJTextBox.cs</DependentUpon>
@@ -111,11 +124,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Crud_Pedidos.resx">
+      <DependentUpon>Crud_Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\FomularioProductos.resx">
       <DependentUpon>FomularioProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ModalesProductos\ModalEditarProducto.resx">
+    <EmbeddedResource Include="Views\Modales\ModalEditarProducto.resx">
       <DependentUpon>ModalEditarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modales\ModalRegistrarPedido.resx">
+      <DependentUpon>ModalRegistrarPedido.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
