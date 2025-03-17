@@ -1,4 +1,65 @@
+# Ignorar archivos generados por Visual Studio
 .vs/
-UpgradeLog*.htm
-obj/
-bin/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorar resultados de compilación
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.config
+*.manifest
+*.application
+*.xml
+
+
+# Ignorar archivos de registro y temporales
+*.log
+*.tmp
+*.temp
+
+# Ignorar archivos de usuario específicos del proyecto
+*.csproj.user
+*.vbproj.user
+
+# Ignorar archivos de ReSharper
+_ReSharper.*
+*.resharper
+
+# Ignorar archivos de pruebas
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Ignorar archivos de publicación
+[Pp]ublish/
+
+# Ignorar archivos de Azure
+*.azurepubxml
+*.pubxml
+
+# Ignorar archivos de SQL Server
+*.mdf
+*.ldf
+
+# Ignorar archivos de Python (si los hay)
+__pycache__/
+*.pyc
+
+# Ignorar archivos de Node.js (si los hay)
+node_modules/
+npm-debug.log
+
+# Ignorar archivos de macOS (si trabajas en macOS)
+.DS_Store
+
+# Ignorar archivos de Rider (si usas JetBrains Rider)
+.idea/
+*.iml
+
+# Ignorar archivos de VS Code (si usas VS Code)
+.vscode/
