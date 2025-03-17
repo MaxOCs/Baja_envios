@@ -51,5 +51,10 @@ namespace Sistema_Envios
         {
             openChildForm(new Crud_Pedidos());
         }
+
+        private void BtnClientes_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Crud_Cliente());
+        }
     }
 }
