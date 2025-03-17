@@ -30,8 +30,8 @@ namespace Sistema_Envios.Views
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvProductosCatalogo = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,19 +44,19 @@ namespace Sistema_Envios.Views
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cbAlmacenes = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btnEditar = new FontAwesome.Sharp.IconButton();
-            this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.txtDimenciones = new Sistema_Envios.Componentes.RJTextBox();
             this.txtDescription = new Sistema_Envios.Componentes.RJTextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtPrecio = new Sistema_Envios.Componentes.RJTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtCantidad = new Sistema_Envios.Componentes.RJTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.txtNombreProducto = new Sistema_Envios.Componentes.RJTextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.rjButton1 = new Sistema_Envios.Componentes.RJButton();
+            this.btnEditar = new FontAwesome.Sharp.IconButton();
+            this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProductosCatalogo)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -66,19 +66,20 @@ namespace Sistema_Envios.Views
             // 
             this.dgvProductosCatalogo.AllowUserToAddRows = false;
             this.dgvProductosCatalogo.AllowUserToDeleteRows = false;
+            this.dgvProductosCatalogo.AllowUserToResizeRows = false;
             this.dgvProductosCatalogo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductosCatalogo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductosCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvProductosCatalogo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvProductosCatalogo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvProductosCatalogo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProductosCatalogo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -87,14 +88,14 @@ namespace Sistema_Envios.Views
             this.Precio,
             this.stock,
             this.Almacen});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvProductosCatalogo.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvProductosCatalogo.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvProductosCatalogo.Location = new System.Drawing.Point(302, 115);
             this.dgvProductosCatalogo.Name = "dgvProductosCatalogo";
             this.dgvProductosCatalogo.ReadOnly = true;
@@ -208,6 +209,44 @@ namespace Sistema_Envios.Views
             this.label7.TabIndex = 20;
             this.label7.Text = "Dimensiones";
             // 
+            // txtDimenciones
+            // 
+            this.txtDimenciones.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDimenciones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.txtDimenciones.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtDimenciones.BorderSize = 1;
+            this.txtDimenciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDimenciones.ForeColor = System.Drawing.Color.Black;
+            this.txtDimenciones.Location = new System.Drawing.Point(22, 234);
+            this.txtDimenciones.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDimenciones.Multiline = false;
+            this.txtDimenciones.Name = "txtDimenciones";
+            this.txtDimenciones.Padding = new System.Windows.Forms.Padding(7);
+            this.txtDimenciones.PasswordChar = false;
+            this.txtDimenciones.Size = new System.Drawing.Size(227, 31);
+            this.txtDimenciones.TabIndex = 19;
+            this.txtDimenciones.Texts = "";
+            this.txtDimenciones.UnderlinedStyle = false;
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
+            this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.txtDescription.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtDescription.BorderSize = 1;
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.ForeColor = System.Drawing.Color.Black;
+            this.txtDescription.Location = new System.Drawing.Point(23, 293);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescription.Multiline = true;
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Padding = new System.Windows.Forms.Padding(7);
+            this.txtDescription.PasswordChar = false;
+            this.txtDescription.Size = new System.Drawing.Size(227, 75);
+            this.txtDescription.TabIndex = 18;
+            this.txtDescription.Texts = "";
+            this.txtDescription.UnderlinedStyle = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -230,6 +269,25 @@ namespace Sistema_Envios.Views
             this.label2.TabIndex = 4;
             this.label2.Text = "Descripcción";
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BackColor = System.Drawing.SystemColors.Window;
+            this.txtPrecio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.txtPrecio.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtPrecio.BorderSize = 1;
+            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.ForeColor = System.Drawing.Color.Black;
+            this.txtPrecio.Location = new System.Drawing.Point(154, 101);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecio.Multiline = false;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Padding = new System.Windows.Forms.Padding(7);
+            this.txtPrecio.PasswordChar = false;
+            this.txtPrecio.Size = new System.Drawing.Size(95, 31);
+            this.txtPrecio.TabIndex = 16;
+            this.txtPrecio.Texts = "";
+            this.txtPrecio.UnderlinedStyle = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -240,6 +298,25 @@ namespace Sistema_Envios.Views
             this.label3.Size = new System.Drawing.Size(81, 20);
             this.label3.TabIndex = 5;
             this.label3.Text = "Cantidad";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.BackColor = System.Drawing.SystemColors.Window;
+            this.txtCantidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.txtCantidad.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtCantidad.BorderSize = 1;
+            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantidad.ForeColor = System.Drawing.Color.Black;
+            this.txtCantidad.Location = new System.Drawing.Point(22, 101);
+            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCantidad.Multiline = false;
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Padding = new System.Windows.Forms.Padding(7);
+            this.txtCantidad.PasswordChar = false;
+            this.txtCantidad.Size = new System.Drawing.Size(94, 31);
+            this.txtCantidad.TabIndex = 15;
+            this.txtCantidad.Texts = "";
+            this.txtCantidad.UnderlinedStyle = false;
             // 
             // label4
             // 
@@ -252,6 +329,25 @@ namespace Sistema_Envios.Views
             this.label4.TabIndex = 6;
             this.label4.Text = "Precio";
             // 
+            // txtNombreProducto
+            // 
+            this.txtNombreProducto.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombreProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.txtNombreProducto.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNombreProducto.BorderSize = 1;
+            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreProducto.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreProducto.Location = new System.Drawing.Point(22, 42);
+            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreProducto.Multiline = false;
+            this.txtNombreProducto.Name = "txtNombreProducto";
+            this.txtNombreProducto.Padding = new System.Windows.Forms.Padding(7);
+            this.txtNombreProducto.PasswordChar = false;
+            this.txtNombreProducto.Size = new System.Drawing.Size(227, 31);
+            this.txtNombreProducto.TabIndex = 14;
+            this.txtNombreProducto.Texts = "";
+            this.txtNombreProducto.UnderlinedStyle = false;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -263,6 +359,26 @@ namespace Sistema_Envios.Views
             this.label5.TabIndex = 8;
             this.label5.Text = "Almacen";
             this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // rjButton1
+            // 
+            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.rjButton1.BorderRadius = 15;
+            this.rjButton1.BorderSize = 0;
+            this.rjButton1.FlatAppearance.BorderSize = 0;
+            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rjButton1.ForeColor = System.Drawing.Color.White;
+            this.rjButton1.Location = new System.Drawing.Point(23, 390);
+            this.rjButton1.Name = "rjButton1";
+            this.rjButton1.Size = new System.Drawing.Size(227, 38);
+            this.rjButton1.TabIndex = 11;
+            this.rjButton1.Text = "Agregar";
+            this.rjButton1.TextColor = System.Drawing.Color.White;
+            this.rjButton1.UseVisualStyleBackColor = false;
+            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // btnEditar
             // 
@@ -311,121 +427,6 @@ namespace Sistema_Envios.Views
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = false;
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // txtDimenciones
-            // 
-            this.txtDimenciones.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDimenciones.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.txtDimenciones.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtDimenciones.BorderSize = 1;
-            this.txtDimenciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDimenciones.ForeColor = System.Drawing.Color.Black;
-            this.txtDimenciones.Location = new System.Drawing.Point(22, 234);
-            this.txtDimenciones.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDimenciones.Multiline = false;
-            this.txtDimenciones.Name = "txtDimenciones";
-            this.txtDimenciones.Padding = new System.Windows.Forms.Padding(7);
-            this.txtDimenciones.PasswordChar = false;
-            this.txtDimenciones.Size = new System.Drawing.Size(227, 31);
-            this.txtDimenciones.TabIndex = 19;
-            this.txtDimenciones.Texts = "";
-            this.txtDimenciones.UnderlinedStyle = false;
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.BackColor = System.Drawing.SystemColors.Window;
-            this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.txtDescription.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtDescription.BorderSize = 1;
-            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.ForeColor = System.Drawing.Color.Black;
-            this.txtDescription.Location = new System.Drawing.Point(23, 293);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescription.Multiline = true;
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Padding = new System.Windows.Forms.Padding(7);
-            this.txtDescription.PasswordChar = false;
-            this.txtDescription.Size = new System.Drawing.Size(227, 75);
-            this.txtDescription.TabIndex = 18;
-            this.txtDescription.Texts = "";
-            this.txtDescription.UnderlinedStyle = false;
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPrecio.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.txtPrecio.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtPrecio.BorderSize = 1;
-            this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrecio.ForeColor = System.Drawing.Color.Black;
-            this.txtPrecio.Location = new System.Drawing.Point(154, 101);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrecio.Multiline = false;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Padding = new System.Windows.Forms.Padding(7);
-            this.txtPrecio.PasswordChar = false;
-            this.txtPrecio.Size = new System.Drawing.Size(95, 31);
-            this.txtPrecio.TabIndex = 16;
-            this.txtPrecio.Texts = "";
-            this.txtPrecio.UnderlinedStyle = false;
-            // 
-            // txtCantidad
-            // 
-            this.txtCantidad.BackColor = System.Drawing.SystemColors.Window;
-            this.txtCantidad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.txtCantidad.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtCantidad.BorderSize = 1;
-            this.txtCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCantidad.ForeColor = System.Drawing.Color.Black;
-            this.txtCantidad.Location = new System.Drawing.Point(22, 101);
-            this.txtCantidad.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCantidad.Multiline = false;
-            this.txtCantidad.Name = "txtCantidad";
-            this.txtCantidad.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCantidad.PasswordChar = false;
-            this.txtCantidad.Size = new System.Drawing.Size(94, 31);
-            this.txtCantidad.TabIndex = 15;
-            this.txtCantidad.Texts = "";
-            this.txtCantidad.UnderlinedStyle = false;
-            // 
-            // txtNombreProducto
-            // 
-            this.txtNombreProducto.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNombreProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.txtNombreProducto.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNombreProducto.BorderSize = 1;
-            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreProducto.Location = new System.Drawing.Point(22, 42);
-            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombreProducto.Multiline = false;
-            this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNombreProducto.PasswordChar = false;
-            this.txtNombreProducto.Size = new System.Drawing.Size(227, 31);
-            this.txtNombreProducto.TabIndex = 14;
-            this.txtNombreProducto.Texts = "";
-            this.txtNombreProducto.UnderlinedStyle = false;
-            // 
-            // rjButton1
-            // 
-            this.rjButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.rjButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.rjButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.rjButton1.BorderRadius = 15;
-            this.rjButton1.BorderSize = 0;
-            this.rjButton1.FlatAppearance.BorderSize = 0;
-            this.rjButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rjButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjButton1.ForeColor = System.Drawing.Color.White;
-            this.rjButton1.Location = new System.Drawing.Point(23, 390);
-            this.rjButton1.Name = "rjButton1";
-            this.rjButton1.Size = new System.Drawing.Size(227, 38);
-            this.rjButton1.TabIndex = 11;
-            this.rjButton1.Text = "Agregar";
-            this.rjButton1.TextColor = System.Drawing.Color.White;
-            this.rjButton1.UseVisualStyleBackColor = false;
-            this.rjButton1.Click += new System.EventHandler(this.rjButton1_Click);
             // 
             // FomularioProductos
             // 

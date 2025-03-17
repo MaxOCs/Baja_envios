@@ -27,6 +27,7 @@ namespace Sistema_Envios.Views
 
             // Configurar el estilo del encabezado de las columnas
             dgvProductosCatalogo.EnableHeadersVisualStyles = false;
+            dgvProductosCatalogo.RowTemplate.Height = 25;
 
             // Cargar los productos y almacenes
             CargarProductos();

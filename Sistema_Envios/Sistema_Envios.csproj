@@ -69,6 +69,7 @@
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\AlmacenServices.cs" />
+    <Compile Include="Data\ClienteServices.cs" />
     <Compile Include="Data\Conexion.cs" />
     <Compile Include="Data\CrearDB.cs" />
     <Compile Include="Data\Parametro.cs" />
@@ -82,6 +83,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Almacen.cs" />
+    <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,11 +106,19 @@
     <Compile Include="Views\FomularioProductos.Designer.cs">
       <DependentUpon>FomularioProductos.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+    <Compile Include="Views\Modales\ModalAgregarConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modales\ModalAgregarConcepto.Designer.cs">
+      <DependentUpon>ModalAgregarConcepto.cs</DependentUpon>
+=======
     <Compile Include="Views\Modales\ModalEditarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Modales\ModalEditarCliente.Designer.cs">
       <DependentUpon>ModalEditarCliente.cs</DependentUpon>
+>>>>>>> 674582645553d3854814126273eb557365426bfc
     </Compile>
     <Compile Include="Views\Modales\ModalEditarProducto.cs">
       <SubType>Form</SubType>
@@ -151,8 +162,13 @@
     <EmbeddedResource Include="Views\FomularioProductos.resx">
       <DependentUpon>FomularioProductos.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Views\Modales\ModalAgregarConcepto.resx">
+      <DependentUpon>ModalAgregarConcepto.cs</DependentUpon>
+=======
     <EmbeddedResource Include="Views\Modales\ModalEditarCliente.resx">
       <DependentUpon>ModalEditarCliente.cs</DependentUpon>
+>>>>>>> 674582645553d3854814126273eb557365426bfc
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modales\ModalEditarProducto.resx">
       <DependentUpon>ModalEditarProducto.cs</DependentUpon>
