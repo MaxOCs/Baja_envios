@@ -72,5 +72,10 @@ namespace Sistema_Envios.Views
                 }
             }
         }
+
+        private void Crud_Pedidos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
