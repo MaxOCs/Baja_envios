@@ -119,5 +119,10 @@ namespace Sistema_Envios.Views.ModalesProductos
             ProductoActualizado.Invoke();
             this.Close();
         }
+
+        private void rjButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
