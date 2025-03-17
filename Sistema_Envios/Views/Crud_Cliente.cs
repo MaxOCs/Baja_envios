@@ -118,5 +118,11 @@ namespace Sistema_Envios.Views
             form.Show();
        
         }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            ModalEditarCliente form = new ModalEditarCliente();
+            form.Show();
+        }
     }
 }

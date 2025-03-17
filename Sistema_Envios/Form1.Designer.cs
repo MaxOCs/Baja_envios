@@ -43,6 +43,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelNameDev = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.BtnAlmacen = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.PanelLogo.SuspendLayout();
@@ -75,6 +76,7 @@
             // 
             // panelButtons
             // 
+            this.panelButtons.Controls.Add(this.BtnAlmacen);
             this.panelButtons.Controls.Add(this.BtnClientes);
             this.panelButtons.Controls.Add(this.BtnVehiculos);
             this.panelButtons.Controls.Add(this.BtnProducts);
@@ -239,6 +241,26 @@
             this.panelChildForm.Size = new System.Drawing.Size(1014, 651);
             this.panelChildForm.TabIndex = 6;
             // 
+            // BtnAlmacen
+            // 
+            this.BtnAlmacen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.BtnAlmacen.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnAlmacen.FlatAppearance.BorderSize = 0;
+            this.BtnAlmacen.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.BtnAlmacen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAlmacen.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAlmacen.ForeColor = System.Drawing.Color.White;
+            this.BtnAlmacen.IconChar = FontAwesome.Sharp.IconChar.Warehouse;
+            this.BtnAlmacen.IconColor = System.Drawing.Color.White;
+            this.BtnAlmacen.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnAlmacen.Location = new System.Drawing.Point(0, 300);
+            this.BtnAlmacen.Name = "BtnAlmacen";
+            this.BtnAlmacen.Size = new System.Drawing.Size(250, 60);
+            this.BtnAlmacen.TabIndex = 15;
+            this.BtnAlmacen.Text = "Almacen";
+            this.BtnAlmacen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnAlmacen.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +300,7 @@
         private FontAwesome.Sharp.IconButton BtnProducts;
         private FontAwesome.Sharp.IconButton BtnPedidos;
         private System.Windows.Forms.Label labelNameDev;
+        private FontAwesome.Sharp.IconButton BtnAlmacen;
     }
 }
 
