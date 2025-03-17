@@ -16,3 +16,4 @@ C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envi
 C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.ModalesProductos.ModalEditarProducto.resources
 C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Crud_Pedidos.resources
 C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Modales.ModalRegistrarPedido.resources
+C:\Users\MaxOC\source\repos\Sistema_Envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Modales.ModalAgregarConcepto.resources

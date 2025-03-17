@@ -69,6 +69,7 @@
       <DependentUpon>RJTextBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Data\AlmacenServices.cs" />
+    <Compile Include="Data\ClienteServices.cs" />
     <Compile Include="Data\Conexion.cs" />
     <Compile Include="Data\CrearDB.cs" />
     <Compile Include="Data\Parametro.cs" />
@@ -82,6 +83,7 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Almacen.cs" />
+    <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Program.cs" />
@@ -97,6 +99,12 @@
     </Compile>
     <Compile Include="Views\FomularioProductos.Designer.cs">
       <DependentUpon>FomularioProductos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modales\ModalAgregarConcepto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modales\ModalAgregarConcepto.Designer.cs">
+      <DependentUpon>ModalAgregarConcepto.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Modales\ModalEditarProducto.cs">
       <SubType>Form</SubType>
@@ -130,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FomularioProductos.resx">
       <DependentUpon>FomularioProductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modales\ModalAgregarConcepto.resx">
+      <DependentUpon>ModalAgregarConcepto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modales\ModalEditarProducto.resx">
       <DependentUpon>ModalEditarProducto.cs</DependentUpon>
