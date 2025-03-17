@@ -33,7 +33,7 @@
             this.registroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panelButtons = new System.Windows.Forms.Panel();
-            this.iconButton5 = new FontAwesome.Sharp.IconButton();
+            this.BtnClientes = new FontAwesome.Sharp.IconButton();
             this.BtnVehiculos = new FontAwesome.Sharp.IconButton();
             this.BtnProducts = new FontAwesome.Sharp.IconButton();
             this.BtnPedidos = new FontAwesome.Sharp.IconButton();
@@ -75,7 +75,7 @@
             // 
             // panelButtons
             // 
-            this.panelButtons.Controls.Add(this.iconButton5);
+            this.panelButtons.Controls.Add(this.BtnClientes);
             this.panelButtons.Controls.Add(this.BtnVehiculos);
             this.panelButtons.Controls.Add(this.BtnProducts);
             this.panelButtons.Controls.Add(this.BtnPedidos);
@@ -87,25 +87,26 @@
             this.panelButtons.Size = new System.Drawing.Size(250, 415);
             this.panelButtons.TabIndex = 1;
             // 
-            // iconButton5
+            // BtnClientes
             // 
-            this.iconButton5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.iconButton5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.iconButton5.FlatAppearance.BorderSize = 0;
-            this.iconButton5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.iconButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton5.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton5.ForeColor = System.Drawing.Color.White;
-            this.iconButton5.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
-            this.iconButton5.IconColor = System.Drawing.Color.White;
-            this.iconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton5.Location = new System.Drawing.Point(0, 240);
-            this.iconButton5.Name = "iconButton5";
-            this.iconButton5.Size = new System.Drawing.Size(250, 60);
-            this.iconButton5.TabIndex = 14;
-            this.iconButton5.Text = "Clientes";
-            this.iconButton5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton5.UseVisualStyleBackColor = false;
+            this.BtnClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.BtnClientes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnClientes.FlatAppearance.BorderSize = 0;
+            this.BtnClientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.BtnClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnClientes.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnClientes.ForeColor = System.Drawing.Color.White;
+            this.BtnClientes.IconChar = FontAwesome.Sharp.IconChar.UserAlt;
+            this.BtnClientes.IconColor = System.Drawing.Color.White;
+            this.BtnClientes.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnClientes.Location = new System.Drawing.Point(0, 240);
+            this.BtnClientes.Name = "BtnClientes";
+            this.BtnClientes.Size = new System.Drawing.Size(250, 60);
+            this.BtnClientes.TabIndex = 14;
+            this.BtnClientes.Text = "Clientes";
+            this.BtnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnClientes.UseVisualStyleBackColor = false;
+            this.BtnClientes.Click += new System.EventHandler(this.BtnClientes_Click);
             // 
             // BtnVehiculos
             // 
@@ -272,7 +273,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panelChildForm;
         private FontAwesome.Sharp.IconButton btnEnvios;
-        private FontAwesome.Sharp.IconButton iconButton5;
+        private FontAwesome.Sharp.IconButton BtnClientes;
         private FontAwesome.Sharp.IconButton BtnVehiculos;
         private FontAwesome.Sharp.IconButton BtnProducts;
         private FontAwesome.Sharp.IconButton BtnPedidos;
