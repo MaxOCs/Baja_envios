@@ -36,18 +36,19 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.BtnAgregar = new FontAwesome.Sharp.IconButton();
             this.dgvConceptosPedido = new System.Windows.Forms.DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.LbClientes = new System.Windows.Forms.ListBox();
             this.txtBuscarClientes = new Sistema_Envios.Componentes.RJTextBox();
-            this.rjTextBox1 = new Sistema_Envios.Componentes.RJTextBox();
+            this.txtTotal = new Sistema_Envios.Componentes.RJTextBox();
             this.rjButton1 = new Sistema_Envios.Componentes.RJButton();
             this.txtTelefono = new Sistema_Envios.Componentes.RJTextBox();
             this.txtDireccion = new Sistema_Envios.Componentes.RJTextBox();
             this.btnEdit = new Sistema_Envios.Componentes.RJButton();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConceptosPedido)).BeginInit();
             this.SuspendLayout();
             // 
@@ -138,6 +139,7 @@
             this.dgvConceptosPedido.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvConceptosPedido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvConceptosPedido.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.Producto,
             this.Cantidad,
             this.Precio,
@@ -158,30 +160,6 @@
             this.dgvConceptosPedido.Size = new System.Drawing.Size(1056, 233);
             this.dgvConceptosPedido.TabIndex = 51;
             // 
-            // Producto
-            // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
             // label2
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -196,10 +174,12 @@
             // 
             // LbClientes
             // 
+            this.LbClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LbClientes.FormattingEnabled = true;
+            this.LbClientes.ItemHeight = 20;
             this.LbClientes.Location = new System.Drawing.Point(33, 122);
             this.LbClientes.Name = "LbClientes";
-            this.LbClientes.Size = new System.Drawing.Size(334, 30);
+            this.LbClientes.Size = new System.Drawing.Size(334, 24);
             this.LbClientes.TabIndex = 55;
             this.LbClientes.SelectedIndexChanged += new System.EventHandler(this.LbClientes_SelectedIndexChanged);
             // 
@@ -223,25 +203,25 @@
             this.txtBuscarClientes.UnderlinedStyle = false;
             this.txtBuscarClientes._TextChanged += new System.EventHandler(this.txtBuscarClientes__TextChanged);
             // 
-            // rjTextBox1
+            // txtTotal
             // 
-            this.rjTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.rjTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.rjTextBox1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.rjTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.rjTextBox1.BorderSize = 1;
-            this.rjTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rjTextBox1.ForeColor = System.Drawing.Color.Black;
-            this.rjTextBox1.Location = new System.Drawing.Point(956, 464);
-            this.rjTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.rjTextBox1.Multiline = false;
-            this.rjTextBox1.Name = "rjTextBox1";
-            this.rjTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.rjTextBox1.PasswordChar = false;
-            this.rjTextBox1.Size = new System.Drawing.Size(138, 31);
-            this.rjTextBox1.TabIndex = 53;
-            this.rjTextBox1.Texts = "";
-            this.rjTextBox1.UnderlinedStyle = false;
+            this.txtTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTotal.BackColor = System.Drawing.SystemColors.Window;
+            this.txtTotal.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.txtTotal.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtTotal.BorderSize = 1;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotal.ForeColor = System.Drawing.Color.Black;
+            this.txtTotal.Location = new System.Drawing.Point(956, 464);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTotal.Multiline = false;
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Padding = new System.Windows.Forms.Padding(7);
+            this.txtTotal.PasswordChar = false;
+            this.txtTotal.Size = new System.Drawing.Size(138, 31);
+            this.txtTotal.TabIndex = 53;
+            this.txtTotal.Texts = "";
+            this.txtTotal.UnderlinedStyle = false;
             // 
             // rjButton1
             // 
@@ -324,6 +304,37 @@
             this.btnEdit.Text = "Registrar";
             this.btnEdit.TextColor = System.Drawing.Color.White;
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Codigo";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
             // 
             // ModalRegistrarPedido
             // 
@@ -332,7 +343,7 @@
             this.ClientSize = new System.Drawing.Size(1130, 578);
             this.Controls.Add(this.LbClientes);
             this.Controls.Add(this.txtBuscarClientes);
-            this.Controls.Add(this.rjTextBox1);
+            this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvConceptosPedido);
             this.Controls.Add(this.BtnAgregar);
@@ -363,13 +374,14 @@
         private Componentes.RJButton rjButton1;
         private FontAwesome.Sharp.IconButton BtnAgregar;
         private System.Windows.Forms.DataGridView dgvConceptosPedido;
+        private System.Windows.Forms.Label label2;
+        private Componentes.RJTextBox txtTotal;
+        private Componentes.RJTextBox txtBuscarClientes;
+        private System.Windows.Forms.ListBox LbClientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.Label label2;
-        private Componentes.RJTextBox rjTextBox1;
-        private Componentes.RJTextBox txtBuscarClientes;
-        private System.Windows.Forms.ListBox LbClientes;
     }
 }

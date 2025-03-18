@@ -15,8 +15,10 @@ namespace Sistema_Envios.Views.Modales
     public partial class ModalAgregarConcepto : Form
     {
         private ProductosServices producto_services;
+        public int id_producto;
         public class ProductoSeleccionado
         {
+            public int id { get; set; }
             public string Nombre { get; set; }
             public decimal Precio { get; set; }
             public int Cantidad { get; set; }
@@ -71,6 +73,7 @@ namespace Sistema_Envios.Views.Modales
             {
                 Producto = new ProductoSeleccionado
                 {
+                    id = id_producto,
                     Nombre = txtNombreProducto.Texts,
                     Precio = Convert.ToDecimal(txtPrecio.Texts),
                     Cantidad = Convert.ToInt32(nudCantidad.Value)
@@ -93,6 +96,7 @@ namespace Sistema_Envios.Views.Modales
                 Producto producto = producto_services.BuscarProductoPorNombre(productoSeleccionado);
                 txtNombreProducto.Texts = producto.Nombre.ToString();
                 txtPrecio.Texts = producto.Precio.ToString();
+                id_producto = producto.ID_Producto;
                 LbProductos.Visible = false;
             }
         }

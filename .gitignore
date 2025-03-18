@@ -102,3 +102,6 @@ _ReSharper.*
 # Ignorar archivos de Python (si los hay)
 _pycache_/
 *.pyc
+Sistema_Envios/bin/Debug/Sistema_Envios.pdb
+Sistema_Envios/bin/Debug/Sistema_Envios.exe
+Sistema_Envios/bin/Debug/Sistema_Envios.pdb

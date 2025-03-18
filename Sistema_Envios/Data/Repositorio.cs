@@ -66,12 +66,10 @@ namespace Sistema_Envios.Data
             }
             return filasAfectadas;
         }
-
         public static response EjecutarProcedimiento(string ProcedureName, List<Parametro> Parametros, string conexion = "")
         {
             try
             {
-               
                 // Si no se proporciona una cadena de conexión, usa una por defecto
                 if (string.IsNullOrEmpty(conexion))
                 {
@@ -91,20 +89,27 @@ namespace Sistema_Envios.Data
                         {
                             foreach (var parametro in Parametros)
                             {
-                                cmd.Parameters.Add(new SqlParameter
+                                SqlParameter sqlParam = new SqlParameter
                                 {
                                     ParameterName = parametro.Nombre,
                                     SqlDbType = parametro.Tipo,
                                     Direction = parametro.Direccion,
                                     Value = parametro.Valor ?? DBNull.Value // Manejo de valores nulos
-                                });
+                                };
+
+                                // Si es un parámetro de tipo tabla, se maneja de forma especial
+                                if (parametro.Tipo == SqlDbType.Structured)
+                                {
+                                    sqlParam.TypeName = "dbo.TipoDetallePedido"; // Asegúrate de que el tipo en la base de datos coincida
+                                }
+
+                                cmd.Parameters.Add(sqlParam);
                             }
                         }
 
                         // Ejecutar el procedimiento almacenado
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
-                            // Leer los resultados si es necesario
                             var result = new List<Dictionary<string, object>>();
                             while (reader.Read())
                             {
@@ -128,6 +133,7 @@ namespace Sistema_Envios.Data
                 return new response(false, $"Error al ejecutar el procedimiento: {ex.Message}");
             }
         }
+
         // Método genérico para ejecutar consultas y retornar una lista de objetos
         public List<T> ObtenerLista<T>(string query, Func<IDataReader, T> mapper)
         {
