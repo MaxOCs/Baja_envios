@@ -10,7 +10,7 @@ namespace Sistema_Envios.Data
 {
     public class Conexion
     {
-        private SqlConnection CD_Conexion = new SqlConnection("Data Source=LAPMAX;Initial Catalog=ENVIOS_DB;Integrated Security=True"); //CADENA DE CONEXIÓN (cambiar de ser necesario)
+        private SqlConnection CD_Conexion = new SqlConnection("SERVER=localhost;Database=ENVIOS_DB;Integrated Security=True"); //CADENA DE CONEXIÓN (cambiar de ser necesario)
         public SqlConnection AbrirConexion()
         {
             if (CD_Conexion.State == ConnectionState.Closed)
