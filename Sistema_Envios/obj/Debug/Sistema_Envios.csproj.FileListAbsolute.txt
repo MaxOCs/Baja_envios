@@ -37,3 +37,5 @@ C:\Users\USER\Source\Repos\Baja_envios\Sistema_Envios\obj\Debug\Sistema_Envios.V
 C:\Users\USER\Source\Repos\Baja_envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Modales.ModalRegistrarCliente.resources
 C:\Users\USER\Source\Repos\Baja_envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Modales.ModalModificarCliente.resources
 C:\Users\USER\Source\Repos\Baja_envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Crud_Almacen.resources
+C:\Users\USER\Source\Repos\Baja_envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Crud_Vehiculo.resources
+C:\Users\USER\Source\Repos\Baja_envios\Sistema_Envios\obj\Debug\Sistema_Envios.Views.Modales.ModalAgregarConcepto.ModalRegistrarPedido.resources

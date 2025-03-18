@@ -4,6 +4,58 @@
 *.user
 *.userosscache
 *.sln.docstates
+<<<<<<< HEAD
+=======
+
+# Ignorar resultados de compilación
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.config
+*.manifest
+*.application
+*.xml
+
+# Ignorar archivos de paquetes NuGet
+[Nn]u[Pp]ackages/
+*.nupkg
+packages/
+
+# Ignorar archivos de registro y temporales
+*.log
+*.tmp
+*.temp
+
+# Ignorar archivos de usuario específicos del proyecto
+*.csproj.user
+*.vbproj.user
+
+# Ignorar archivos de ReSharper
+_ReSharper.*
+*.resharper
+
+# Ignorar archivos de pruebas
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Ignorar archivos de publicación
+[Pp]ublish/
+
+# Ignorar archivos de Azure
+*.azurepubxml
+*.pubxml
+
+# Ignorar archivos de SQL Server
+*.mdf
+*.ldf
+
+# Ignorar archivos de Python (si los hay)
+__pycache__/
+*.pyc
+>>>>>>> origin/dev3
 
 # Ignorar resultados de compilación
 [Bb]in/
