@@ -11,12 +11,17 @@ using System.Windows.Forms;
 
 namespace Sistema_Envios.Views.Modales
 {
-    public partial class ModalRegistrarCliente : Form
+    public partial class ModalRegistrarAlmacen : Form
     {
         string CD_Conexion = "SERVER=localhost;Database=ENVIOS_DB;Integrated Security=True";
-        public ModalRegistrarCliente()
+        public ModalRegistrarAlmacen()
         {
             InitializeComponent();
+        }
+
+        private void ModalRegistrarAlmacen_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -28,10 +33,10 @@ namespace Sistema_Envios.Views.Modales
         {
             string nombre = txtNombre.Text;
             string direccion = txtDireccion.Text;
-            string telefono = txtTelefono.Text;
+            string Capacidad = txtCapacidad.Text;
 
 
-            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(telefono))
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(direccion) || string.IsNullOrEmpty(Capacidad))
             {
                 MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -43,13 +48,13 @@ namespace Sistema_Envios.Views.Modales
                 {
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand("spInsert_Cliente", conn))
+                    using (SqlCommand cmd = new SqlCommand("spInsert_Almacen", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text.Trim());
                         cmd.Parameters.AddWithValue("@Direccion", txtDireccion.Text.Trim());
-                        cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text.Trim());
+                        cmd.Parameters.AddWithValue("@Capacidad", Convert.ToInt32(txtCapacidad.Text.Trim()));
 
                         cmd.ExecuteNonQuery();
 
@@ -58,7 +63,7 @@ namespace Sistema_Envios.Views.Modales
 
                         txtNombre.Clear();
                         txtDireccion.Clear();
-                        txtTelefono.Clear();
+                        txtCapacidad.Clear();
                     }
                 }
                 catch (Exception ex)
@@ -66,11 +71,6 @@ namespace Sistema_Envios.Views.Modales
                     MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-        }
-
-        private void ModalRegistrarCliente_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

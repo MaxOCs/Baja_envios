@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Sistema_Envios.Views.Modales;
+using Sistema_Envios.Data;
 
 namespace Sistema_Envios.Views
 {
@@ -110,6 +112,12 @@ namespace Sistema_Envios.Views
             {
                 filaSeleccionada = e.RowIndex;
             }
+        }
+
+        private void BtnRegistrar_Click(object sender, EventArgs e)
+        {
+            ModalRegistrarAlmacen form = new ModalRegistrarAlmacen();
+            form.Show();
         }
     }
 }
