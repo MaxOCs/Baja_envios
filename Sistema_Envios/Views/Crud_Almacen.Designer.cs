@@ -34,10 +34,10 @@
             this.BtnRegistrar = new FontAwesome.Sharp.IconButton();
             this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.BtnModificar = new FontAwesome.Sharp.IconButton();
-            this.dgvCatalogoClientes = new System.Windows.Forms.DataGridView();
+            this.dgvCatalogoAlmacen = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoAlmacen)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,7 @@
             this.BtnVer.Text = "Ver";
             this.BtnVer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnVer.UseVisualStyleBackColor = false;
+            this.BtnVer.Click += new System.EventHandler(this.BtnVer_Click);
             // 
             // BtnRegistrar
             // 
@@ -108,6 +109,7 @@
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnModificar
             // 
@@ -132,16 +134,16 @@
             this.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnModificar.UseVisualStyleBackColor = false;
             // 
-            // dgvCatalogoClientes
+            // dgvCatalogoAlmacen
             // 
-            this.dgvCatalogoClientes.AllowUserToAddRows = false;
-            this.dgvCatalogoClientes.AllowUserToDeleteRows = false;
-            this.dgvCatalogoClientes.AllowUserToResizeRows = false;
-            this.dgvCatalogoClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvCatalogoAlmacen.AllowUserToAddRows = false;
+            this.dgvCatalogoAlmacen.AllowUserToDeleteRows = false;
+            this.dgvCatalogoAlmacen.AllowUserToResizeRows = false;
+            this.dgvCatalogoAlmacen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCatalogoClientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCatalogoClientes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.dgvCatalogoAlmacen.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCatalogoAlmacen.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,8 +151,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatalogoClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCatalogoClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCatalogoAlmacen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCatalogoAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -158,14 +160,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCatalogoClientes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCatalogoClientes.Location = new System.Drawing.Point(34, 96);
-            this.dgvCatalogoClientes.Name = "dgvCatalogoClientes";
-            this.dgvCatalogoClientes.ReadOnly = true;
-            this.dgvCatalogoClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvCatalogoClientes.RowHeadersVisible = false;
-            this.dgvCatalogoClientes.Size = new System.Drawing.Size(802, 395);
-            this.dgvCatalogoClientes.TabIndex = 32;
+            this.dgvCatalogoAlmacen.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCatalogoAlmacen.Location = new System.Drawing.Point(34, 96);
+            this.dgvCatalogoAlmacen.Name = "dgvCatalogoAlmacen";
+            this.dgvCatalogoAlmacen.ReadOnly = true;
+            this.dgvCatalogoAlmacen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCatalogoAlmacen.RowHeadersVisible = false;
+            this.dgvCatalogoAlmacen.Size = new System.Drawing.Size(802, 395);
+            this.dgvCatalogoAlmacen.TabIndex = 32;
+            this.dgvCatalogoAlmacen.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatalogoAlmacen_CellClick);
             // 
             // panel1
             // 
@@ -197,13 +200,14 @@
             this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.dgvCatalogoClientes);
+            this.Controls.Add(this.dgvCatalogoAlmacen);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Crud_Almacen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crud_Almacen";
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoClientes)).EndInit();
+            this.Load += new System.EventHandler(this.Crud_Almacen_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoAlmacen)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -216,7 +220,7 @@
         private FontAwesome.Sharp.IconButton BtnRegistrar;
         private FontAwesome.Sharp.IconButton BtnEliminar;
         private FontAwesome.Sharp.IconButton BtnModificar;
-        private System.Windows.Forms.DataGridView dgvCatalogoClientes;
+        private System.Windows.Forms.DataGridView dgvCatalogoAlmacen;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
     }
