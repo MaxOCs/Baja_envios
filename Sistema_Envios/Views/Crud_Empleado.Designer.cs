@@ -1,6 +1,6 @@
 ﻿namespace Sistema_Envios.Views
 {
-    partial class Crud_Cliente
+    partial class Crud_Empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,40 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.BtnVer = new FontAwesome.Sharp.IconButton();
             this.BtnRegistrar = new FontAwesome.Sharp.IconButton();
             this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.BtnModificar = new FontAwesome.Sharp.IconButton();
-            this.dgvCatalogoCliente = new System.Windows.Forms.DataGridView();
+            this.dgvCatalogoEmpleado = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.BtnVer = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoEmpleado)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // BtnVer
+            // 
+            this.BtnVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.BtnVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnVer.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.BtnVer.FlatAppearance.BorderSize = 2;
+            this.BtnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnVer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnVer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.BtnVer.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.BtnVer.IconColor = System.Drawing.Color.White;
+            this.BtnVer.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.BtnVer.IconSize = 27;
+            this.BtnVer.Location = new System.Drawing.Point(0, 41);
+            this.BtnVer.Name = "BtnVer";
+            this.BtnVer.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
+            this.BtnVer.Size = new System.Drawing.Size(129, 39);
+            this.BtnVer.TabIndex = 42;
+            this.BtnVer.Text = "Ver";
+            this.BtnVer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.BtnVer.UseVisualStyleBackColor = false;
+            this.BtnVer.Click += new System.EventHandler(this.BtnVer_Click);
             // 
             // BtnRegistrar
             // 
@@ -54,15 +78,14 @@
             this.BtnRegistrar.IconColor = System.Drawing.Color.White;
             this.BtnRegistrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnRegistrar.IconSize = 27;
-            this.BtnRegistrar.Location = new System.Drawing.Point(330, 48);
+            this.BtnRegistrar.Location = new System.Drawing.Point(389, 41);
             this.BtnRegistrar.Name = "BtnRegistrar";
             this.BtnRegistrar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.BtnRegistrar.Size = new System.Drawing.Size(142, 39);
-            this.BtnRegistrar.TabIndex = 29;
+            this.BtnRegistrar.Size = new System.Drawing.Size(122, 39);
+            this.BtnRegistrar.TabIndex = 41;
             this.BtnRegistrar.Text = "Registrar";
             this.BtnRegistrar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnRegistrar.UseVisualStyleBackColor = false;
-            this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
             // BtnEliminar
             // 
@@ -78,11 +101,11 @@
             this.BtnEliminar.IconColor = System.Drawing.Color.White;
             this.BtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnEliminar.IconSize = 27;
-            this.BtnEliminar.Location = new System.Drawing.Point(512, 48);
+            this.BtnEliminar.Location = new System.Drawing.Point(517, 41);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.BtnEliminar.Size = new System.Drawing.Size(150, 39);
-            this.BtnEliminar.TabIndex = 28;
+            this.BtnEliminar.Size = new System.Drawing.Size(123, 39);
+            this.BtnEliminar.TabIndex = 40;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = false;
@@ -102,26 +125,25 @@
             this.BtnModificar.IconColor = System.Drawing.Color.White;
             this.BtnModificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnModificar.IconSize = 27;
-            this.BtnModificar.Location = new System.Drawing.Point(703, 48);
+            this.BtnModificar.Location = new System.Drawing.Point(655, 41);
             this.BtnModificar.Name = "BtnModificar";
             this.BtnModificar.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.BtnModificar.Size = new System.Drawing.Size(150, 39);
-            this.BtnModificar.TabIndex = 27;
+            this.BtnModificar.Size = new System.Drawing.Size(121, 39);
+            this.BtnModificar.TabIndex = 39;
             this.BtnModificar.Text = "Editar";
             this.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnModificar.UseVisualStyleBackColor = false;
-            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
-            // dgvCatalogoCliente
+            // dgvCatalogoEmpleado
             // 
-            this.dgvCatalogoCliente.AllowUserToAddRows = false;
-            this.dgvCatalogoCliente.AllowUserToDeleteRows = false;
-            this.dgvCatalogoCliente.AllowUserToResizeRows = false;
-            this.dgvCatalogoCliente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvCatalogoEmpleado.AllowUserToAddRows = false;
+            this.dgvCatalogoEmpleado.AllowUserToDeleteRows = false;
+            this.dgvCatalogoEmpleado.AllowUserToResizeRows = false;
+            this.dgvCatalogoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvCatalogoCliente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvCatalogoCliente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.dgvCatalogoEmpleado.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCatalogoEmpleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -129,8 +151,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatalogoCliente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvCatalogoCliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCatalogoEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCatalogoEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,15 +160,15 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCatalogoCliente.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvCatalogoCliente.Location = new System.Drawing.Point(34, 115);
-            this.dgvCatalogoCliente.Name = "dgvCatalogoCliente";
-            this.dgvCatalogoCliente.ReadOnly = true;
-            this.dgvCatalogoCliente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dgvCatalogoCliente.RowHeadersVisible = false;
-            this.dgvCatalogoCliente.Size = new System.Drawing.Size(802, 359);
-            this.dgvCatalogoCliente.TabIndex = 26;
-            this.dgvCatalogoCliente.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatalogoClientes_CellClick);
+            this.dgvCatalogoEmpleado.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCatalogoEmpleado.Location = new System.Drawing.Point(16, 123);
+            this.dgvCatalogoEmpleado.Name = "dgvCatalogoEmpleado";
+            this.dgvCatalogoEmpleado.ReadOnly = true;
+            this.dgvCatalogoEmpleado.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvCatalogoEmpleado.RowHeadersVisible = false;
+            this.dgvCatalogoEmpleado.Size = new System.Drawing.Size(760, 368);
+            this.dgvCatalogoEmpleado.TabIndex = 38;
+            this.dgvCatalogoEmpleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCatalogoEmpleado_CellClick);
             // 
             // panel1
             // 
@@ -155,8 +177,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 35);
-            this.panel1.TabIndex = 25;
+            this.panel1.Size = new System.Drawing.Size(800, 35);
+            this.panel1.TabIndex = 37;
             // 
             // label6
             // 
@@ -165,51 +187,27 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(51, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(144, 21);
+            this.label6.Size = new System.Drawing.Size(160, 21);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Catalogo Clientes";
+            this.label6.Text = "Catalogo Empleado";
             // 
-            // BtnVer
-            // 
-            this.BtnVer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnVer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.BtnVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.BtnVer.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
-            this.BtnVer.FlatAppearance.BorderSize = 2;
-            this.BtnVer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnVer.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnVer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnVer.IconChar = FontAwesome.Sharp.IconChar.Eye;
-            this.BtnVer.IconColor = System.Drawing.Color.White;
-            this.BtnVer.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnVer.IconSize = 27;
-            this.BtnVer.Location = new System.Drawing.Point(34, 48);
-            this.BtnVer.Name = "BtnVer";
-            this.BtnVer.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.BtnVer.Size = new System.Drawing.Size(150, 39);
-            this.BtnVer.TabIndex = 30;
-            this.BtnVer.Text = "Ver";
-            this.BtnVer.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnVer.UseVisualStyleBackColor = false;
-            this.BtnVer.Click += new System.EventHandler(this.BtnVer_Click);
-            // 
-            // Crud_Cliente
+            // Crud_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 475);
+            this.ClientSize = new System.Drawing.Size(800, 490);
             this.Controls.Add(this.BtnVer);
             this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnModificar);
-            this.Controls.Add(this.dgvCatalogoCliente);
+            this.Controls.Add(this.dgvCatalogoEmpleado);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Crud_Cliente";
+            this.Name = "Crud_Empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Crud_Cliente";
-            this.Load += new System.EventHandler(this.Crud_Cliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoCliente)).EndInit();
+            this.Text = "Crud_Empleado";
+            this.Load += new System.EventHandler(this.Crud_Empleado_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoEmpleado)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -218,12 +216,12 @@
 
         #endregion
 
+        private FontAwesome.Sharp.IconButton BtnVer;
         private FontAwesome.Sharp.IconButton BtnRegistrar;
         private FontAwesome.Sharp.IconButton BtnEliminar;
         private FontAwesome.Sharp.IconButton BtnModificar;
-        private System.Windows.Forms.DataGridView dgvCatalogoCliente;
+        private System.Windows.Forms.DataGridView dgvCatalogoEmpleado;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private FontAwesome.Sharp.IconButton BtnVer;
     }
 }

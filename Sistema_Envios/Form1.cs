@@ -71,5 +71,10 @@ namespace Sistema_Envios
         {
             openChildForm(new Curd_Vehiculos());
         }
+
+        private void BtnEmpleado_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Crud_Empleado());
+        }
     }
 }
