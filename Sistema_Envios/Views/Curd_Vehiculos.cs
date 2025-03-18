@@ -8,7 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Sistema_Envios.Views.Modales;
+using Sistema_Envios.Data;
 namespace Sistema_Envios.Views
 {
     public partial class Curd_Vehiculos : Form
@@ -106,5 +107,11 @@ namespace Sistema_Envios.Views
                 }
             }
             }
+
+        private void BtnRegistrar_Click(object sender, EventArgs e)
+        {
+            ModalRegistrarVehiculo form = new ModalRegistrarVehiculo();
+            form.Show();
+        }
     }
 }
