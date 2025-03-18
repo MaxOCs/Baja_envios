@@ -119,5 +119,11 @@ namespace Sistema_Envios.Views
             ModalRegistrarEmpleado form = new ModalRegistrarEmpleado();
             form.Show();
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            ModalModificarEmpleado form = new ModalModificarEmpleado();
+            form.Show();
+        }
     }
 }
