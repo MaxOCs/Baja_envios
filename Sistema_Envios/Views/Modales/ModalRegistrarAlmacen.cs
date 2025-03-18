@@ -58,7 +58,7 @@ namespace Sistema_Envios.Views.Modales
 
                         cmd.ExecuteNonQuery();
 
-                        MessageBox.Show("Cliente insertado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Almacen insertado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
                         txtNombre.Clear();

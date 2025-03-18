@@ -119,5 +119,11 @@ namespace Sistema_Envios.Views
             ModalRegistrarAlmacen form = new ModalRegistrarAlmacen();
             form.Show();
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            ModalModificarAlmacen form = new ModalModificarAlmacen();
+            form.Show();
+        }
     }
 }
