@@ -18,7 +18,6 @@ namespace Sistema_Envios.Views.Modales
         private ClienteServices clienteServices;
         private int id_cliente;
         private decimal total = 0;
-        private int id_producto;
         public ModalRegistrarPedido()
         {
             InitializeComponent();
