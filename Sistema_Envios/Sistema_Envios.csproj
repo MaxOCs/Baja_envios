@@ -72,6 +72,7 @@
     <Compile Include="Data\ClienteServices.cs" />
     <Compile Include="Data\Conexion.cs" />
     <Compile Include="Data\CrearDB.cs" />
+    <Compile Include="Data\EmpleadoServices.cs" />
     <Compile Include="Data\Parametro.cs" />
     <Compile Include="Data\ProductosServices.cs" />
     <Compile Include="Data\Repositorio.cs" />
@@ -85,6 +86,7 @@
     </Compile>
     <Compile Include="Models\Almacen.cs" />
     <Compile Include="Models\Cliente.cs" />
+    <Compile Include="Models\Empledo.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Models\Vehiculo.cs" />

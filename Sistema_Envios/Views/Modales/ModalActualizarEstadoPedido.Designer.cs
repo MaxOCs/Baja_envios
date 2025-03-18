@@ -32,12 +32,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.cbEstados = new System.Windows.Forms.ComboBox();
+            this.cbVehiculos = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbEmpleados = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNombreProducto = new Sistema_Envios.Componentes.RJTextBox();
+            this.txtNombreCliente = new Sistema_Envios.Componentes.RJTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dgvConceptosPedido = new System.Windows.Forms.DataGridView();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,17 +70,17 @@
             this.label6.TabIndex = 13;
             this.label6.Text = "Iniciar pedido";
             // 
-            // cbEstados
+            // cbVehiculos
             // 
-            this.cbEstados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbEstados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbEstados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbEstados.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbEstados.FormattingEnabled = true;
-            this.cbEstados.Location = new System.Drawing.Point(388, 410);
-            this.cbEstados.Name = "cbEstados";
-            this.cbEstados.Size = new System.Drawing.Size(219, 28);
-            this.cbEstados.TabIndex = 56;
+            this.cbVehiculos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbVehiculos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbVehiculos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbVehiculos.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVehiculos.FormattingEnabled = true;
+            this.cbVehiculos.Location = new System.Drawing.Point(388, 410);
+            this.cbVehiculos.Name = "cbVehiculos";
+            this.cbVehiculos.Size = new System.Drawing.Size(219, 28);
+            this.cbVehiculos.TabIndex = 56;
             // 
             // label5
             // 
@@ -106,17 +106,17 @@
             this.label1.TabIndex = 57;
             this.label1.Text = "Chofer";
             // 
-            // comboBox1
+            // cbEmpleados
             // 
-            this.comboBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(57, 410);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 28);
-            this.comboBox1.TabIndex = 58;
+            this.cbEmpleados.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbEmpleados.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbEmpleados.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbEmpleados.FormattingEnabled = true;
+            this.cbEmpleados.Location = new System.Drawing.Point(57, 410);
+            this.cbEmpleados.Name = "cbEmpleados";
+            this.cbEmpleados.Size = new System.Drawing.Size(219, 28);
+            this.cbEmpleados.TabIndex = 58;
             // 
             // label2
             // 
@@ -129,24 +129,24 @@
             this.label2.TabIndex = 59;
             this.label2.Text = "Cliente";
             // 
-            // txtNombreProducto
+            // txtNombreCliente
             // 
-            this.txtNombreProducto.BackColor = System.Drawing.SystemColors.Window;
-            this.txtNombreProducto.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            this.txtNombreProducto.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtNombreProducto.BorderSize = 1;
-            this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreProducto.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreProducto.Location = new System.Drawing.Point(44, 98);
-            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombreProducto.Multiline = false;
-            this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNombreProducto.PasswordChar = false;
-            this.txtNombreProducto.Size = new System.Drawing.Size(245, 31);
-            this.txtNombreProducto.TabIndex = 60;
-            this.txtNombreProducto.Texts = "";
-            this.txtNombreProducto.UnderlinedStyle = false;
+            this.txtNombreCliente.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombreCliente.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.txtNombreCliente.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNombreCliente.BorderSize = 1;
+            this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCliente.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreCliente.Location = new System.Drawing.Point(44, 98);
+            this.txtNombreCliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreCliente.Multiline = false;
+            this.txtNombreCliente.Name = "txtNombreCliente";
+            this.txtNombreCliente.Padding = new System.Windows.Forms.Padding(7);
+            this.txtNombreCliente.PasswordChar = false;
+            this.txtNombreCliente.Size = new System.Drawing.Size(245, 31);
+            this.txtNombreCliente.TabIndex = 60;
+            this.txtNombreCliente.Texts = "";
+            this.txtNombreCliente.UnderlinedStyle = false;
             // 
             // label3
             // 
@@ -234,6 +234,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // BtnRegistrarEnvio
             // 
@@ -268,11 +269,11 @@
             this.Controls.Add(this.BtnRegistrarEnvio);
             this.Controls.Add(this.dgvConceptosPedido);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtNombreProducto);
+            this.Controls.Add(this.txtNombreCliente);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbEmpleados);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.cbEstados);
+            this.Controls.Add(this.cbVehiculos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "ModalActualizarEstadoPedido";
@@ -290,12 +291,12 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cbEstados;
+        private System.Windows.Forms.ComboBox cbVehiculos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbEmpleados;
         private System.Windows.Forms.Label label2;
-        private Componentes.RJTextBox txtNombreProducto;
+        private Componentes.RJTextBox txtNombreCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridView dgvConceptosPedido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;

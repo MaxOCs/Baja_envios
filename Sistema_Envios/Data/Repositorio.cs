@@ -73,7 +73,7 @@ namespace Sistema_Envios.Data
                 // Si no se proporciona una cadena de conexión, usa una por defecto
                 if (string.IsNullOrEmpty(conexion))
                 {
-                    conexion = "Data Source=LAPMAX;Initial Catalog=ENVIOS_DB;Integrated Security=True"; //cambiar la conexion aqui
+                    conexion = "SERVER=localhost;Database=ENVIOS_DB;Integrated Security=True"; //cambiar la conexion aqui
                 }
 
                 using (SqlConnection conn = new SqlConnection(conexion))

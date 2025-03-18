@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Sistema_Envios.Views.Modales;
 using Sistema_Envios.Data;
 using Sistema_Envios.Models;
+using Sistema_Envios.Views.ModalesProductos;
 
 namespace Sistema_Envios.Views
 {
@@ -138,6 +139,38 @@ namespace Sistema_Envios.Views
         public void EliminarPedido(int id)
         {
             Pedido.EliminarPedido(id);
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            // Verificar que se haya seleccionado al menos una celda
+            if (dgvCatalogoPedidos.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dgvCatalogoPedidos.SelectedCells[0];
+
+                int rowIndex = selectedCell.RowIndex;
+
+                var pedido  = (Pedido)dgvCatalogoPedidos.Rows[rowIndex].Tag;
+
+                // Verifica si el producto fue encontrado
+                if (pedido != null)
+                {
+                    ModalActualizarEstadoPedido modal = new ModalActualizarEstadoPedido();
+                    modal.ID_Pedido = pedido.ID_Pedido;  
+                    modal.StartPosition = FormStartPosition.CenterParent;
+                    modal.CargarInformacion();
+                    modal.ShowDialog();  // Mostrar el modal
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el producto.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una celda para editar.");
+            }
         }
     }
 }
