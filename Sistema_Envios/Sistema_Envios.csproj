@@ -124,11 +124,23 @@
     <Compile Include="Views\Modales\ModalEditarProducto.Designer.cs">
       <DependentUpon>ModalEditarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Modales\ModalModificarAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modales\ModalModificarAlmacen.Designer.cs">
+      <DependentUpon>ModalModificarAlmacen.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Modales\ModalModificarCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Views\Modales\ModalModificarCliente.Designer.cs">
       <DependentUpon>ModalModificarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modales\ModalRegistrarAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modales\ModalRegistrarAlmacen.Designer.cs">
+      <DependentUpon>ModalRegistrarAlmacen.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Modales\ModalRegistrarCliente.cs">
       <SubType>Form</SubType>
@@ -175,8 +187,14 @@
     <EmbeddedResource Include="Views\Modales\ModalEditarProducto.resx">
       <DependentUpon>ModalEditarProducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modales\ModalModificarAlmacen.resx">
+      <DependentUpon>ModalModificarAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Modales\ModalModificarCliente.resx">
       <DependentUpon>ModalModificarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modales\ModalRegistrarAlmacen.resx">
+      <DependentUpon>ModalRegistrarAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modales\ModalRegistrarCliente.resx">
       <DependentUpon>ModalRegistrarCliente.cs</DependentUpon>

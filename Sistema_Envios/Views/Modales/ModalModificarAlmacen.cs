@@ -11,24 +11,19 @@ using System.Windows.Forms;
 
 namespace Sistema_Envios.Views.Modales
 {
-    public partial class ModalModificarCliente : Form
+    public partial class ModalModificarAlmacen : Form
     {
         string CD_Conexion = "SERVER=localhost;Database=ENVIOS_DB;Integrated Security=True";
-        public ModalModificarCliente()
+        public ModalModificarAlmacen()
         {
             InitializeComponent();
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string query = @"SELECT Cliente.Nombre,Cliente.Direccion,Cliente.Telefono
-                        From Cliente
-                        Where Cliente.ID_Cliente = @ID_Cliente";
+            string query = @"SELECT Almacen.Nombre,Almacen.Direccion,Almacen.Capacidad
+                        From Almacen
+                        Where Almacen.ID_Almacen = @ID_Almacen";
             using (SqlConnection conn = new SqlConnection(CD_Conexion))
             {
                 try
@@ -37,7 +32,7 @@ namespace Sistema_Envios.Views.Modales
                     SqlCommand cmd = new SqlCommand(query, conn);
 
 
-                    cmd.Parameters.AddWithValue("@ID_Cliente", txtID.Text);
+                    cmd.Parameters.AddWithValue("@ID_Almacen", txtID.Text);
 
                     SqlDataReader reader = cmd.ExecuteReader();
 
@@ -47,12 +42,12 @@ namespace Sistema_Envios.Views.Modales
                         {
                             txtNombre.Text = reader["Nombre"].ToString();
                             txtDireccion.Text = reader["Direccion"].ToString();
-                            txtTelefono.Text = reader["Telefono"].ToString();
+                            txtCapacidad.Text = reader["Capacidad"].ToString();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("No se encontraron registros para este ID de Cliente.");
+                        MessageBox.Show("No se encontraron registros para este ID de Almacen.");
                     }
                 }
                 catch (Exception ex)
@@ -62,13 +57,18 @@ namespace Sistema_Envios.Views.Modales
             }
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();   
+        }
+
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            string query = @"UPDATE Cliente
+            string query = @"UPDATE Almacen
                          SET Nombre = @Nombre,
                              Direccion = @Direccion,
-                             Telefono = @Telefono
-                         WHERE Cliente.ID_Cliente = @ID_Cliente";
+                             Capacidad = @Capacidad
+                         WHERE Almacen.ID_Almacen = @ID_Almacen";
             using (SqlConnection conn = new SqlConnection(CD_Conexion))
             {
                 try
@@ -77,21 +77,21 @@ namespace Sistema_Envios.Views.Modales
                     SqlCommand cmd = new SqlCommand(query, conn);
 
                     // Asignar valores desde los controles del formulario
-                    cmd.Parameters.AddWithValue("@ID_Cliente", txtID.Text);
+                    cmd.Parameters.AddWithValue("@ID_Almacen", txtID.Text);
                     cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
                     cmd.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
-                    cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
+                    cmd.Parameters.AddWithValue("@Capacidad", Convert.ToInt32(txtCapacidad.Text));
 
 
                     // Ejecutar la consulta
                     int filasAfectadas = cmd.ExecuteNonQuery();
                     if (filasAfectadas > 0)
                     {
-                        MessageBox.Show("Cliente actualizado correctamente.");
+                        MessageBox.Show("Almacen actualizado correctamente.");
                     }
                     else
                     {
-                        MessageBox.Show("No se encontró el Cliente.");
+                        MessageBox.Show("No se encontró el Almacen.");
                     }
                 }
                 catch (Exception ex)
@@ -99,11 +99,6 @@ namespace Sistema_Envios.Views.Modales
                     MessageBox.Show($"Error: {ex.Message}");
                 }
             }
-        }
-
-        private void ModalModificarCliente_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
