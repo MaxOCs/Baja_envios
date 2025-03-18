@@ -61,5 +61,15 @@ namespace Sistema_Envios
         {
             openChildForm(new Crud_Almacen());
         }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnVehiculos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Curd_Vehiculos());
+        }
     }
 }
