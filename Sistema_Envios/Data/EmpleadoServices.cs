@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Sistema_Envios.Data
 {
-    internal class EmpleadoServices
+    public class EmpleadoServices
     {
         private Repositorio _repositorio;
 
@@ -18,9 +18,9 @@ namespace Sistema_Envios.Data
             _repositorio = new Repositorio();
         }
 
-        public List<Empleado> ObtenerAlmacenes()
+        public List<Empleado> ObtenerEmpleados()
         {
-            string query = "SELECT ID_Almacen, Nombre FROM Almacen";
+            string query = "SELECT ID_Empleado, Nombre FROM Empleado";
             Func<IDataReader, Empleado> mapper = reader => new Empleado
             {
                 Id_Empleado = (int)reader["ID_Almacen"],
