@@ -126,5 +126,30 @@ namespace Sistema_Envios.Views.Modales
                 MessageBox.Show("Error al cargar los almacenes: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void BtnRegistrarEnvio_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Envio newEnvio = new Envio
+                {
+                    ID_Pedido = ID_Pedido,
+                    ID_Empleado = Convert.ToInt32(cbEmpleados.SelectedValue),
+                    ID_Vehiculo = Convert.ToInt32(cbVehiculos.SelectedValue),
+                };
+
+                // Capturar la respuesta del método Agregar
+                response respuesta = Envio.AgregarEnvio(newEnvio);
+
+                // Mostrar el mensaje de respuesta
+                MessageBox.Show(respuesta.Message);
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("Verifica que los campos de cantidad y precio sean valores numéricos válidos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

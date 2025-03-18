@@ -87,6 +87,7 @@
     <Compile Include="Models\Almacen.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Empledo.cs" />
+    <Compile Include="Models\Envio.cs" />
     <Compile Include="Models\Pedido.cs" />
     <Compile Include="Models\Producto.cs" />
     <Compile Include="Models\Vehiculo.cs" />

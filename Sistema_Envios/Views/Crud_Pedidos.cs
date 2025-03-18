@@ -155,11 +155,15 @@ namespace Sistema_Envios.Views
                 // Verifica si el producto fue encontrado
                 if (pedido != null)
                 {
+
                     ModalActualizarEstadoPedido modal = new ModalActualizarEstadoPedido();
                     modal.ID_Pedido = pedido.ID_Pedido;  
                     modal.StartPosition = FormStartPosition.CenterParent;
                     modal.CargarInformacion();
-                    modal.ShowDialog();  // Mostrar el modal
+                    if (modal.ShowDialog() == DialogResult.OK)
+                    {
+                        CargarCatalogo();
+                    }
 
                 }
                 else

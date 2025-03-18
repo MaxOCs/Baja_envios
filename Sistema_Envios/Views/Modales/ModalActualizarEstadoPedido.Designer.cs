@@ -258,6 +258,7 @@
             this.BtnRegistrarEnvio.Text = "Registar envio";
             this.BtnRegistrarEnvio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnRegistrarEnvio.UseVisualStyleBackColor = false;
+            this.BtnRegistrarEnvio.Click += new System.EventHandler(this.BtnRegistrarEnvio_Click);
             // 
             // ModalActualizarEstadoPedido
             // 
