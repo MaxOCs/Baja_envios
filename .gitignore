@@ -1,3 +1,107 @@
+# Ignorar archivos generados por Visual Studio
 .vs/
-UpgradeLog*.htm
-obj/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Ignorar resultados de compilación
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.config
+*.manifest
+*.application
+*.xml
+
+# Ignorar archivos de paquetes NuGet
+[Nn]u[Pp]ackages/
+*.nupkg
+packages/
+
+# Ignorar archivos de registro y temporales
+*.log
+*.tmp
+*.temp
+
+# Ignorar archivos de usuario específicos del proyecto
+*.csproj.user
+*.vbproj.user
+
+# Ignorar archivos de ReSharper
+_ReSharper.*
+*.resharper
+
+# Ignorar archivos de pruebas
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Ignorar archivos de publicación
+[Pp]ublish/
+
+# Ignorar archivos de Azure
+*.azurepubxml
+*.pubxml
+
+# Ignorar archivos de SQL Server
+*.mdf
+*.ldf
+
+# Ignorar archivos de Python (si los hay)
+__pycache__/
+*.pyc
+
+# Ignorar resultados de compilación
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+*.config
+*.manifest
+*.application
+*.xml
+
+# Ignorar archivos de paquetes NuGet
+[Nn]u[Pp]ackages/
+*.nupkg
+packages/
+
+# Ignorar archivos de registro y temporales
+*.log
+*.tmp
+*.temp
+
+# Ignorar archivos de usuario específicos del proyecto
+*.csproj.user
+*.vbproj.user
+
+# Ignorar archivos de ReSharper
+_ReSharper.*
+*.resharper
+
+# Ignorar archivos de pruebas
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Ignorar archivos de publicación
+[Pp]ublish/
+
+# Ignorar archivos de Azure
+*.azurepubxml
+*.pubxml
+
+# Ignorar archivos de SQL Server
+*.mdf
+*.ldf
+
+# Ignorar archivos de Python (si los hay)
+_pycache_/
+*.pyc
+Sistema_Envios/bin/Debug/Sistema_Envios.pdb
+Sistema_Envios/bin/Debug/Sistema_Envios.exe
+Sistema_Envios/bin/Debug/Sistema_Envios.pdb

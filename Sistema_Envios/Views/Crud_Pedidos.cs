@@ -29,7 +29,12 @@ namespace Sistema_Envios.Views
         {
           ModalRegistrarPedido modal = new ModalRegistrarPedido();
             modal.StartPosition = FormStartPosition.CenterParent;
-            modal.ShowDialog();   
+            // Mostrar el modal y verificar si se cerró con OK
+            if (modal.ShowDialog() == DialogResult.OK)
+            {
+                // Si se cierra con OK, ejecutar CargarCatalogo()
+                CargarCatalogo();
+            }
         }
 
         public void CargarCatalogo()
@@ -71,6 +76,11 @@ namespace Sistema_Envios.Views
                         break;
                 }
             }
+        }
+
+        private void Crud_Pedidos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
