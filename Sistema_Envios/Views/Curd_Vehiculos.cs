@@ -113,5 +113,12 @@ namespace Sistema_Envios.Views
             ModalRegistrarVehiculo form = new ModalRegistrarVehiculo();
             form.Show();
         }
+
+        private void BtnModificar_Click(object sender, EventArgs e)
+        {
+            ModalModificarVehiculo mod = new ModalModificarVehiculo();
+            mod.Show();
+
+        }
     }
 }
