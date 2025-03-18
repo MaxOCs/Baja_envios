@@ -106,6 +106,12 @@
     <Compile Include="Views\Crud_Pedidos.Designer.cs">
       <DependentUpon>Crud_Pedidos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Curd_Vehiculos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Curd_Vehiculos.Designer.cs">
+      <DependentUpon>Curd_Vehiculos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\FomularioProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Crud_Pedidos.resx">
       <DependentUpon>Crud_Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Curd_Vehiculos.resx">
+      <DependentUpon>Curd_Vehiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\FomularioProductos.resx">
       <DependentUpon>FomularioProductos.cs</DependentUpon>

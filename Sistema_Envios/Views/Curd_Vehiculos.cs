@@ -8,23 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Sistema_Envios.Views.Modales;
-using Sistema_Envios.Data;
 
 namespace Sistema_Envios.Views
 {
-    public partial class Crud_Almacen : Form
+    public partial class Curd_Vehiculos : Form
     {
         string CD_Conexion = "SERVER=localhost;Database=ENVIOS_DB;Integrated Security=True";
         private int filaSeleccionada = -1;
-        public Crud_Almacen()
+        public Curd_Vehiculos()
         {
             InitializeComponent();
-        }
-
-        private void Crud_Almacen_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void BtnVer_Click(object sender, EventArgs e)
@@ -34,7 +27,7 @@ namespace Sistema_Envios.Views
                 try
                 {
                     conn.Open();
-                    string query = @"SELECT * FROM Almacen";
+                    string query = @"SELECT * FROM Vehiculo";
 
 
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -42,9 +35,9 @@ namespace Sistema_Envios.Views
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    dgvCatalogoAlmacen.AutoGenerateColumns = true;
-                    dgvCatalogoAlmacen.DataSource = dt;
-                    dgvCatalogoAlmacen.Refresh();
+                    dgvCatalogoVehiculos.AutoGenerateColumns = true;
+                    dgvCatalogoVehiculos.DataSource = dt;
+                    dgvCatalogoVehiculos.Refresh();
                 }
                 catch (Exception ex)
                 {
@@ -53,24 +46,32 @@ namespace Sistema_Envios.Views
             }
         }
 
+        private void dgvCatalogoVehiculos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
+            {
+                filaSeleccionada = e.RowIndex;
+            }
+        }
+
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (filaSeleccionada == -1)
             {
-                MessageBox.Show("Debe seleccionar un Almacen de la primera columna antes de eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Debe seleccionar un Vehiculo de la primera columna antes de eliminar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             // Obtener el ID del cliente desde la primera columna de la fila seleccionada
-            int idAlmacen;
-            if (!int.TryParse(dgvCatalogoAlmacen.Rows[filaSeleccionada].Cells[0].Value?.ToString(), out idAlmacen))
+            int idVehiculo;
+            if (!int.TryParse(dgvCatalogoVehiculos.Rows[filaSeleccionada].Cells[0].Value?.ToString(), out idVehiculo))
             {
                 MessageBox.Show("El ID del Almacen seleccionado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             // Confirmación antes de eliminar
-            DialogResult result = MessageBox.Show($"¿Está seguro de que desea eliminar el Almacen con ID {idAlmacen}?",
+            DialogResult result = MessageBox.Show($"¿Está seguro de que desea eliminar el Almacen con ID {idVehiculo}?",
                 "Confirmación", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
             if (result == DialogResult.Yes)
@@ -81,49 +82,29 @@ namespace Sistema_Envios.Views
                     try
                     {
                         conn.Open();
-                        using (SqlCommand cmd = new SqlCommand("EXEC spDelete_Almacen @ID_Almacen", conn))
+                        using (SqlCommand cmd = new SqlCommand("EXEC spDelete_Vehiculo @ID_Vehiculo", conn))
                         {
-                            cmd.Parameters.AddWithValue("@ID_Almacen", idAlmacen);
+                            cmd.Parameters.AddWithValue("@ID_Vehiculo", idVehiculo);
                             int filasAfectadas = cmd.ExecuteNonQuery();
 
                             if (filasAfectadas > 0)
                             {
-                                MessageBox.Show("Almacen eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                dgvCatalogoAlmacen.Rows.RemoveAt(filaSeleccionada); // Eliminar la fila del DataGridView
+                                MessageBox.Show("Vehiculo eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                dgvCatalogoVehiculos.Rows.RemoveAt(filaSeleccionada); // Eliminar la fila del DataGridView
                                 filaSeleccionada = -1; // Resetear la selección
                             }
                             else
                             {
-                                MessageBox.Show("No se pudo eliminar el Almacen.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                MessageBox.Show("No se pudo eliminar el Vehiculo.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             }
                         }
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error al eliminar el Almacen: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Error al eliminar el Vehiculo: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
-        }
-
-        private void dgvCatalogoAlmacen_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0 && e.ColumnIndex == 0)
-            {
-                filaSeleccionada = e.RowIndex;
             }
-        }
-
-        private void BtnRegistrar_Click(object sender, EventArgs e)
-        {
-            ModalRegistrarAlmacen form = new ModalRegistrarAlmacen();
-            form.Show();
-        }
-
-        private void BtnModificar_Click(object sender, EventArgs e)
-        {
-            ModalModificarAlmacen form = new ModalModificarAlmacen();
-            form.Show();
-        }
     }
 }
