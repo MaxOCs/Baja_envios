@@ -110,6 +110,11 @@
     </Compile>
     <Compile Include="Views\Crud_Envios.Designer.cs">
       <DependentUpon>Crud_Envios.cs</DependentUpon>
+    <Compile Include="Views\Crud_Empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Crud_Empleado.Designer.cs">
+      <DependentUpon>Crud_Empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Crud_Pedidos.cs">
       <SubType>Form</SubType>
@@ -159,6 +164,12 @@
     <Compile Include="Views\Modales\ModalModificarCliente.Designer.cs">
       <DependentUpon>ModalModificarCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Modales\ModalModificarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modales\ModalModificarEmpleado.Designer.cs">
+      <DependentUpon>ModalModificarEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Modales\ModalModificarVehiculo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +187,12 @@
     </Compile>
     <Compile Include="Views\Modales\ModalRegistrarCliente.Designer.cs">
       <DependentUpon>ModalRegistrarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Modales\ModalRegistrarEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Modales\ModalRegistrarEmpleado.Designer.cs">
+      <DependentUpon>ModalRegistrarEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Modales\ModalRegistrarPedido.cs">
       <SubType>Form</SubType>
@@ -212,6 +229,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Crud_Envios.resx">
       <DependentUpon>Crud_Envios.cs</DependentUpon>
+    <EmbeddedResource Include="Views\Crud_Empleado.resx">
+      <DependentUpon>Crud_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Crud_Pedidos.resx">
       <DependentUpon>Crud_Pedidos.cs</DependentUpon>
@@ -237,6 +256,9 @@
     <EmbeddedResource Include="Views\Modales\ModalModificarCliente.resx">
       <DependentUpon>ModalModificarCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modales\ModalModificarEmpleado.resx">
+      <DependentUpon>ModalModificarEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Modales\ModalModificarVehiculo.resx">
       <DependentUpon>ModalModificarVehiculo.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modales\ModalRegistrarCliente.resx">
       <DependentUpon>ModalRegistrarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Modales\ModalRegistrarEmpleado.resx">
+      <DependentUpon>ModalRegistrarEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Modales\ModalRegistrarPedido.resx">
       <DependentUpon>ModalRegistrarPedido.cs</DependentUpon>
