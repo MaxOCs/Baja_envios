@@ -42,9 +42,9 @@ namespace Sistema_Envios.Views
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);
 
-                    dgvCatalogoCliente.AutoGenerateColumns = true;
-                    dgvCatalogoCliente.DataSource = dt;
-                    dgvCatalogoCliente.Refresh();
+                    dgvCatalogoClientes.AutoGenerateColumns = true;
+                    dgvCatalogoClientes.DataSource = dt;
+                    dgvCatalogoClientes.Refresh();
                 }
                 catch (Exception ex)
                 {
@@ -63,7 +63,7 @@ namespace Sistema_Envios.Views
 
             // Obtener el ID del cliente desde la primera columna de la fila seleccionada
             int idCliente;
-            if (!int.TryParse(dgvCatalogoCliente.Rows[filaSeleccionada].Cells[0].Value?.ToString(), out idCliente))
+            if (!int.TryParse(dgvCatalogoClientes.Rows[filaSeleccionada].Cells[0].Value?.ToString(), out idCliente))
             {
                 MessageBox.Show("El ID del cliente seleccionado no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -89,7 +89,7 @@ namespace Sistema_Envios.Views
                             if (filasAfectadas > 0)
                             {
                                 MessageBox.Show("Cliente eliminado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                dgvCatalogoCliente.Rows.RemoveAt(filaSeleccionada); // Eliminar la fila del DataGridView
+                                dgvCatalogoClientes.Rows.RemoveAt(filaSeleccionada); // Eliminar la fila del DataGridView
                                 filaSeleccionada = -1; // Resetear la selección
                             }
                             else

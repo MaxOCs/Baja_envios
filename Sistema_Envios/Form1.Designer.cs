@@ -44,7 +44,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelNameDev = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.BtnEmpleado = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panelButtons.SuspendLayout();
             this.PanelLogo.SuspendLayout();
@@ -77,7 +76,6 @@
             // 
             // panelButtons
             // 
-            this.panelButtons.Controls.Add(this.BtnEmpleado);
             this.panelButtons.Controls.Add(this.BtnAlmacen);
             this.panelButtons.Controls.Add(this.iconButton5);
             this.panelButtons.Controls.Add(this.BtnVehiculos);
@@ -88,7 +86,7 @@
             this.panelButtons.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panelButtons.Location = new System.Drawing.Point(0, 150);
             this.panelButtons.Name = "panelButtons";
-            this.panelButtons.Size = new System.Drawing.Size(250, 442);
+            this.panelButtons.Size = new System.Drawing.Size(250, 415);
             this.panelButtons.TabIndex = 1;
             // 
             // BtnAlmacen
@@ -267,27 +265,6 @@
             this.panelChildForm.TabIndex = 6;
             this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
-            // BtnEmpleado
-            // 
-            this.BtnEmpleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
-            this.BtnEmpleado.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnEmpleado.FlatAppearance.BorderSize = 0;
-            this.BtnEmpleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.BtnEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnEmpleado.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEmpleado.ForeColor = System.Drawing.Color.White;
-            this.BtnEmpleado.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
-            this.BtnEmpleado.IconColor = System.Drawing.Color.White;
-            this.BtnEmpleado.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.BtnEmpleado.Location = new System.Drawing.Point(0, 360);
-            this.BtnEmpleado.Name = "BtnEmpleado";
-            this.BtnEmpleado.Size = new System.Drawing.Size(250, 60);
-            this.BtnEmpleado.TabIndex = 16;
-            this.BtnEmpleado.Text = "Empleado";
-            this.BtnEmpleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.BtnEmpleado.UseVisualStyleBackColor = false;
-            this.BtnEmpleado.Click += new System.EventHandler(this.BtnEmpleado_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -328,7 +305,6 @@
         private FontAwesome.Sharp.IconButton BtnPedidos;
         private System.Windows.Forms.Label labelNameDev;
         private FontAwesome.Sharp.IconButton BtnAlmacen;
-        private FontAwesome.Sharp.IconButton BtnEmpleado;
     }
 }
 
