@@ -168,7 +168,7 @@ namespace Sistema_Envios.Data
         public T GetById<T>(string consulta, int id) where T : class, new()
         {
             // Cadena de conexión
-            string connectionString = "Data Source=LAPMAX;Initial Catalog=ENVIOS_DB;Integrated Security=True";
+            string connectionString = "SERVER=localhost;Database=ENVIOS_DB;Integrated Security=True";
 
             // Crear un objeto del modelo T que devolveremos
             T resultado = new T();

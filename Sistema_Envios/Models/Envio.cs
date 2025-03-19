@@ -10,13 +10,14 @@ namespace Sistema_Envios.Models
 {
     public class Envio
     {
+        public int ID_Envio { get; set; }
         public int ID_Pedido { get; set; }
         public int ID_Vehiculo { get; set; }
         public int ID_Empleado { get; set; }
-        public DateTime Fecha_Envio { get; set; }
+        public DateTime Fecha_envio { get; set; }
         public DateTime Fecha_Estimada_Entrega { get; set; }
         public DateTime Fecha_Real_Entrega { get; set; }
-        public string Estado_envio { get; set; }
+        public string Estado_Envio { get; set; }
         public string Numero_Guia { get; set; }
 
         public static response AgregarEnvio(Envio envio)

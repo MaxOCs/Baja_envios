@@ -210,6 +210,7 @@
             this.btnEnvios.Text = "Envios";
             this.btnEnvios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEnvios.UseVisualStyleBackColor = false;
+            this.btnEnvios.Click += new System.EventHandler(this.btnEnvios_Click);
             // 
             // PanelLogo
             // 
