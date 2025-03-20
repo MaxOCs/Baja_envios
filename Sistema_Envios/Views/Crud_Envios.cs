@@ -113,6 +113,8 @@ namespace Sistema_Envios.Views
                     ModalInicialEnvio modal = new ModalInicialEnvio();
                     modal.StartPosition = FormStartPosition.CenterParent;
                     modal.ID_Envio = envio.ID_Envio;
+                    modal.fecha_estimada = envio.Fecha_Estimada_Entrega;
+                    modal.precargar_fecha();
                     if (modal.ShowDialog() == DialogResult.OK)
                     {
                         // Si se cierra con OK, ejecutar CargarCatalogo()

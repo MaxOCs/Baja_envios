@@ -37,7 +37,7 @@ namespace Sistema_Envios.Models
             int id_ped = ID_Peido;
             var parametros = new List<Parametro>
             {
-                new Parametro("@ID_Pedido",id_ped, SqlDbType.Int),
+                new Parametro("@ID_Envio",id_ped, SqlDbType.Int),
             };
             return Repositorio.EjecutarProcedimiento("GenerarNumeroGuia", parametros);
 
@@ -50,7 +50,7 @@ namespace Sistema_Envios.Models
                 new Parametro("@ID_Envio",envio.ID_Pedido, SqlDbType.Int),
                 new Parametro("@NuevoEstado",envio.Estado_Envio, SqlDbType.VarChar),
                 new Parametro("@Fecha_Entrega_Estimada",envio.Fecha_Estimada_Entrega, SqlDbType.DateTime),
-                new Parametro("@Fecha_Entrega_Real",envio.Fecha_Real_Entrega, SqlDbType.DateTime),
+                //new Parametro("@Fecha_Entrega_Real",envio.Fecha_Real_Entrega, SqlDbType.DateTime),
 
             };
             return Repositorio.EjecutarProcedimiento("sp_ActualizarEstadoEnvio", parametros);

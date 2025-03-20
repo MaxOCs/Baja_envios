@@ -15,14 +15,22 @@ namespace Sistema_Envios.Views.Modales
     public partial class ModalInicialEnvio : Form
     {
         public int ID_Envio { get; set; }
+        public DateTime fecha_estimada { get; set; }
         public ModalInicialEnvio()
         {
             InitializeComponent();
+           
+
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        public void precargar_fecha()
+        {
+            dtpFechaEstimada.Value = fecha_estimada;
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)
@@ -48,9 +56,10 @@ namespace Sistema_Envios.Views.Modales
                 Fecha_Estimada_Entrega = dtpFechaEstimada.Value, // Usar directamente el valor del DateTimePicker
             };
 
+            MessageBox.Show("el id envio es " + ID_Envio);
+
             // Enviar el pedido
             response respuesta = Envio.Enviar_Pedido(newEnvio);
-
             // Verificar si la operación fue exitosa
             if (respuesta.Success) // Asumiendo que la clase "response" tiene una propiedad "Success"
             {
