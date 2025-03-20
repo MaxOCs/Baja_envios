@@ -1,5 +1,7 @@
 ﻿using Sistema_Envios.Data;
 using Sistema_Envios.Models;
+using Sistema_Envios.Views.Modales;
+using Sistema_Envios.Views.ModalesProductos;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -93,6 +95,50 @@ namespace Sistema_Envios.Views
                 dgvCatalogoEnvios.Rows[rowIndex].Cells["Fecha_Real_Entrega"].Value = envio.Fecha_Real_Entrega == DateTime.MinValue ? "" : envio.Fecha_Real_Entrega.ToString("yyyy-MM-dd");
                 dgvCatalogoEnvios.Rows[rowIndex].Cells["Numero_Guia"].Value = envio.Numero_Guia;
             }
+        }
+
+        private void BtnAcualizarEnvio_Click(object sender, EventArgs e)
+        {
+            if (dgvCatalogoEnvios.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dgvCatalogoEnvios.SelectedCells[0];
+
+                int rowIndex = selectedCell.RowIndex;
+
+                var envio = (Envio)dgvCatalogoEnvios.Rows[rowIndex].Tag;
+
+                // Verifica si el producto fue encontrado
+                if (envio != null)
+                {
+                    ModalInicialEnvio modal = new ModalInicialEnvio();
+                    modal.StartPosition = FormStartPosition.CenterParent;
+                    modal.ID_Envio = envio.ID_Envio;
+                    if (modal.ShowDialog() == DialogResult.OK)
+                    {
+                        // Si se cierra con OK, ejecutar CargarCatalogo()
+                        Cargar_Envios();
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("No se encontró el Envio.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una celda para Enviar");
+            }
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEliminar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

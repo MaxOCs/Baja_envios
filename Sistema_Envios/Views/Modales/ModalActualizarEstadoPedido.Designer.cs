@@ -277,6 +277,7 @@
             this.Controls.Add(this.cbVehiculos);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ModalActualizarEstadoPedido";
             this.Text = "ModalActualizarEstadoPedido";
             this.Load += new System.EventHandler(this.ModalActualizarEstadoPedido_Load);

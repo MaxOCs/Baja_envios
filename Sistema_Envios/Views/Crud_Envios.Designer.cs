@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
@@ -81,7 +81,7 @@
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.BtnEditar.IconChar = FontAwesome.Sharp.IconChar.Plus;
+            this.BtnEditar.IconChar = FontAwesome.Sharp.IconChar.Eye;
             this.BtnEditar.IconColor = System.Drawing.Color.White;
             this.BtnEditar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnEditar.IconSize = 27;
@@ -90,9 +90,10 @@
             this.BtnEditar.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.BtnEditar.Size = new System.Drawing.Size(142, 39);
             this.BtnEditar.TabIndex = 28;
-            this.BtnEditar.Text = "Entregado";
+            this.BtnEditar.Text = "Detalles";
             this.BtnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
             // BtnEliminar
             // 
@@ -108,7 +109,7 @@
             this.BtnEliminar.IconColor = System.Drawing.Color.White;
             this.BtnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnEliminar.IconSize = 27;
-            this.BtnEliminar.Location = new System.Drawing.Point(441, 50);
+            this.BtnEliminar.Location = new System.Drawing.Point(402, 50);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
             this.BtnEliminar.Size = new System.Drawing.Size(150, 39);
@@ -116,6 +117,7 @@
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnAcualizarEnvio
             // 
@@ -131,14 +133,15 @@
             this.BtnAcualizarEnvio.IconColor = System.Drawing.Color.White;
             this.BtnAcualizarEnvio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.BtnAcualizarEnvio.IconSize = 27;
-            this.BtnAcualizarEnvio.Location = new System.Drawing.Point(615, 50);
+            this.BtnAcualizarEnvio.Location = new System.Drawing.Point(558, 50);
             this.BtnAcualizarEnvio.Name = "BtnAcualizarEnvio";
             this.BtnAcualizarEnvio.Padding = new System.Windows.Forms.Padding(22, 0, 0, 0);
-            this.BtnAcualizarEnvio.Size = new System.Drawing.Size(189, 39);
+            this.BtnAcualizarEnvio.Size = new System.Drawing.Size(239, 39);
             this.BtnAcualizarEnvio.TabIndex = 26;
-            this.BtnAcualizarEnvio.Text = "Iniciar Envio";
+            this.BtnAcualizarEnvio.Text = "Iniciar / Actualizar Envio";
             this.BtnAcualizarEnvio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.BtnAcualizarEnvio.UseVisualStyleBackColor = false;
+            this.BtnAcualizarEnvio.Click += new System.EventHandler(this.BtnAcualizarEnvio_Click);
             // 
             // dgvCatalogoEnvios
             // 
@@ -150,14 +153,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCatalogoEnvios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCatalogoEnvios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatalogoEnvios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCatalogoEnvios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvCatalogoEnvios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCatalogoEnvios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Envio,
@@ -170,14 +173,14 @@
             this.Fecha_Estimada_Entrega,
             this.Fecha_Real_Entrega,
             this.Numero_Guia});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCatalogoEnvios.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCatalogoEnvios.DefaultCellStyle = dataGridViewCellStyle9;
             this.dgvCatalogoEnvios.Location = new System.Drawing.Point(25, 119);
             this.dgvCatalogoEnvios.Name = "dgvCatalogoEnvios";
             this.dgvCatalogoEnvios.ReadOnly = true;
@@ -218,9 +221,9 @@
             // 
             // Fecha_Envio
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.Fecha_Envio.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            this.Fecha_Envio.DefaultCellStyle = dataGridViewCellStyle8;
             this.Fecha_Envio.HeaderText = "Fecha Envio";
             this.Fecha_Envio.Name = "Fecha_Envio";
             this.Fecha_Envio.ReadOnly = true;
