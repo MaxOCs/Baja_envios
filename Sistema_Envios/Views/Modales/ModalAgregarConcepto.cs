@@ -69,7 +69,7 @@ namespace Sistema_Envios.Views.Modales
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if(nudCantidad.Value > 0 || txtNombreProducto.Texts == "")
+            if(nudCantidad.Value > 0 && txtNombreProducto.Texts != "")
             {
                 Producto = new ProductoSeleccionado
                 {

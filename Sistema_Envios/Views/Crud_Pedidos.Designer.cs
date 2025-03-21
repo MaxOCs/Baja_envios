@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.dgvCatalogoPedidos = new System.Windows.Forms.DataGridView();
@@ -43,6 +43,7 @@
             this.BtnEliminar = new FontAwesome.Sharp.IconButton();
             this.BtnEditar = new FontAwesome.Sharp.IconButton();
             this.BtnRegistrar = new FontAwesome.Sharp.IconButton();
+            this.btnDetalles = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogoPedidos)).BeginInit();
             this.SuspendLayout();
@@ -78,14 +79,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCatalogoPedidos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCatalogoPedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCatalogoPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCatalogoPedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCatalogoPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCatalogoPedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_Pedido,
@@ -94,14 +95,14 @@
             this.Total,
             this.Fecha,
             this.Estado});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCatalogoPedidos.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCatalogoPedidos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCatalogoPedidos.Location = new System.Drawing.Point(34, 134);
             this.dgvCatalogoPedidos.Name = "dgvCatalogoPedidos";
             this.dgvCatalogoPedidos.ReadOnly = true;
@@ -143,9 +144,9 @@
             // 
             // Estado
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            this.Estado.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle2;
             this.Estado.HeaderText = "Estado";
             this.Estado.Name = "Estado";
             this.Estado.ReadOnly = true;
@@ -221,12 +222,36 @@
             this.BtnRegistrar.UseVisualStyleBackColor = false;
             this.BtnRegistrar.Click += new System.EventHandler(this.BtnRegistrar_Click);
             // 
+            // btnDetalles
+            // 
+            this.btnDetalles.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(93)))), ((int)(((byte)(138)))));
+            this.btnDetalles.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnDetalles.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetalles.FlatAppearance.BorderSize = 2;
+            this.btnDetalles.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetalles.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDetalles.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDetalles.IconChar = FontAwesome.Sharp.IconChar.Eye;
+            this.btnDetalles.IconColor = System.Drawing.Color.White;
+            this.btnDetalles.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnDetalles.IconSize = 27;
+            this.btnDetalles.Location = new System.Drawing.Point(192, 57);
+            this.btnDetalles.Name = "btnDetalles";
+            this.btnDetalles.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.btnDetalles.Size = new System.Drawing.Size(142, 39);
+            this.btnDetalles.TabIndex = 29;
+            this.btnDetalles.Text = "Detalles";
+            this.btnDetalles.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDetalles.UseVisualStyleBackColor = false;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
+            // 
             // Crud_Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(783, 514);
+            this.Controls.Add(this.btnDetalles);
             this.Controls.Add(this.BtnRegistrar);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnEditar);
@@ -257,5 +282,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private FontAwesome.Sharp.IconButton btnDetalles;
     }
 }

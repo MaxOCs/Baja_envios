@@ -52,13 +52,15 @@
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProducto.ForeColor = System.Drawing.Color.Black;
             this.txtNombreProducto.Location = new System.Drawing.Point(166, 83);
-            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombreProducto.Multiline = false;
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtNombreProducto.Padding = new System.Windows.Forms.Padding(10);
             this.txtNombreProducto.PasswordChar = false;
+            this.txtNombreProducto.ReadOnly = false;
             this.txtNombreProducto.Size = new System.Drawing.Size(340, 37);
             this.txtNombreProducto.TabIndex = 29;
+            this.txtNombreProducto.TextAling = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNombreProducto.Texts = "";
             this.txtNombreProducto.UnderlinedStyle = false;
             this.txtNombreProducto._TextChanged += new System.EventHandler(this.txtNombreProducto__TextChanged);
@@ -74,13 +76,15 @@
             this.txtPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrecio.ForeColor = System.Drawing.Color.Black;
             this.txtPrecio.Location = new System.Drawing.Point(544, 83);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(6);
             this.txtPrecio.Multiline = false;
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtPrecio.Padding = new System.Windows.Forms.Padding(10);
             this.txtPrecio.PasswordChar = false;
+            this.txtPrecio.ReadOnly = true;
             this.txtPrecio.Size = new System.Drawing.Size(128, 37);
             this.txtPrecio.TabIndex = 30;
+            this.txtPrecio.TextAling = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPrecio.Texts = "";
             this.txtPrecio.UnderlinedStyle = false;
             // 
@@ -89,7 +93,7 @@
             this.nudCantidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.nudCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nudCantidad.Location = new System.Drawing.Point(37, 83);
-            this.nudCantidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.nudCantidad.Margin = new System.Windows.Forms.Padding(4);
             this.nudCantidad.Name = "nudCantidad";
             this.nudCantidad.Size = new System.Drawing.Size(77, 20);
             this.nudCantidad.TabIndex = 31;
@@ -227,7 +231,7 @@
             this.Controls.Add(this.txtNombreProducto);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ModalAgregarConcepto";
             this.Text = "ModalAgregarConcepto";
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();

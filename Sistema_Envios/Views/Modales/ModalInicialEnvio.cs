@@ -30,7 +30,15 @@ namespace Sistema_Envios.Views.Modales
 
         public void precargar_fecha()
         {
-            dtpFechaEstimada.Value = fecha_estimada;
+            if(fecha_estimada == DateTime.MinValue)
+            {
+                fecha_estimada = DateTime.Now;
+            }
+            else
+            {
+                dtpFechaEstimada.Value = fecha_estimada;
+            }
+          
         }
 
         private void btnEnviar_Click(object sender, EventArgs e)

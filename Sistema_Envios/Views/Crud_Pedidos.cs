@@ -176,5 +176,34 @@ namespace Sistema_Envios.Views
                 MessageBox.Show("Por favor, seleccione una celda para editar.");
             }
         }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            if (dgvCatalogoPedidos.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dgvCatalogoPedidos.SelectedCells[0];
+
+                int rowIndex = selectedCell.RowIndex;
+
+                var pedido = (Pedido)dgvCatalogoPedidos.Rows[rowIndex].Tag;
+
+                if (pedido != null)
+                {
+                    ModalDetallesPedido modal = new ModalDetallesPedido(pedido);
+                    modal.StartPosition = FormStartPosition.CenterParent;
+                    modal.CargarInformacion();
+                    if (modal.ShowDialog() == DialogResult.OK)
+                    {
+                        CargarCatalogo();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado un envío válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
+        }
     }
 }

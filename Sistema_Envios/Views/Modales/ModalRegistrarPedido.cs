@@ -81,7 +81,7 @@ namespace Sistema_Envios.Views.Modales
                 // Agregar el producto al DataGridView
                 dgvConceptosPedido.Rows.Add(producto.id, producto.Nombre, producto.Cantidad ,producto.Precio , producto.Precio * producto.Cantidad);
                 total += (producto.Cantidad * producto.Precio);
-                txtTotal.Texts = total.ToString();
+                txtTotal.Texts = "$"+total.ToString();
             };
         }
 
@@ -160,6 +160,25 @@ namespace Sistema_Envios.Views.Modales
             return detalles;
         }
 
+        private void btnEliminarConcepto_Click(object sender, EventArgs e)
+        {
+            // Verifica si hay alguna fila seleccionada en el DataGridView
+            if (dgvConceptosPedido.SelectedCells.Count > 0)
+            {
+                // Obtiene el índice de la fila de la celda seleccionada
+                int selectedRowIndex = dgvConceptosPedido.SelectedCells[0].RowIndex;
 
+                // Verifica si el índice de la fila es válido
+                if (selectedRowIndex >= 0 && selectedRowIndex < dgvConceptosPedido.Rows.Count)
+                {
+                    // Elimina la fila correspondiente
+                    dgvConceptosPedido.Rows.RemoveAt(selectedRowIndex);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione una celda para eliminar la fila.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

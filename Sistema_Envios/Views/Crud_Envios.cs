@@ -36,6 +36,9 @@ namespace Sistema_Envios.Views
             string consulta = @"
         SELECT 
             E.ID_Envio AS Folio,
+            E.ID_Pedido,
+	        E.ID_Vehiculo,
+	        E.ID_Empleado,
             EM.Nombre AS Nombre_Empleado,
             V.Tipo AS Tipo_Vehiculo,
             V.Placa,
@@ -54,8 +57,10 @@ namespace Sistema_Envios.Views
         INNER JOIN 
             Pedido Pd ON Pd.ID_Pedido = E.ID_Pedido
         INNER JOIN 
-            Cliente Cli ON Cli.ID_Cliente = Pd.ID_Cliente;
-    ";
+            Cliente Cli ON Cli.ID_Cliente = Pd.ID_Cliente
+         WHERE 
+             E.delete_at IS NULL; 
+                                    ";
 
             // Ejecutar la consulta y obtener los resultados en un DataTable
             DataTable dt = repositorio.EjecutarConsulta(consulta);
@@ -72,6 +77,10 @@ namespace Sistema_Envios.Views
                 // Crear el objeto Envio con los campos necesarios
                 var envio = new Envio
                 {
+                    Direccion = row["Direccion_Cliente"] == DBNull.Value ? string.Empty : row["Direccion_Cliente"].ToString(),
+                    ID_Vehiculo = row["ID_Vehiculo"] == DBNull.Value ? 0 : Convert.ToInt32(row["ID_Vehiculo"]),
+                    ID_Empleado = row["ID_Empleado"] == DBNull.Value ? 0 : Convert.ToInt32(row["ID_Empleado"]),
+                    ID_Pedido = row["ID_Pedido"] == DBNull.Value ? 0 : Convert.ToInt32(row["ID_Pedido"]),
                     ID_Envio = row["Folio"] == DBNull.Value ? 0 : Convert.ToInt32(row["Folio"]),
                     Numero_Guia = row["Numero_Guia"] == DBNull.Value ? string.Empty : row["Numero_Guia"].ToString(),
                     Estado_Envio = row["Estado_Envio"] == DBNull.Value ? string.Empty : row["Estado_Envio"].ToString(),
@@ -135,12 +144,93 @@ namespace Sistema_Envios.Views
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
+            if (dgvCatalogoEnvios.SelectedCells.Count > 0)
+            {
+                DataGridViewCell selectedCell = dgvCatalogoEnvios.SelectedCells[0];
 
+                int rowIndex = selectedCell.RowIndex;
+
+                var envio = (Envio)dgvCatalogoEnvios.Rows[rowIndex].Tag;
+
+                if (envio != null)
+                {
+                    ModalDetallesEnvio modal = new ModalDetallesEnvio(envio);
+                    if (modal.ShowDialog() == DialogResult.OK)
+                    {
+                        Cargar_Envios();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se ha seleccionado un envío válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
+
+            }
+               
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show("¿Está seguro de eliminar este producto?",
+                                                    "Confirmación de eliminación",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
 
+            // Si el usuario hace clic en "Sí", ejecutamos la acción de eliminar
+            if (resultado == DialogResult.Yes)
+            {
+                if (dgvCatalogoEnvios.SelectedCells.Count > 0)
+                {
+                    DataGridViewCell selectedCell = dgvCatalogoEnvios.SelectedCells[0];
+
+                    int rowIndex = selectedCell.RowIndex;
+
+                    var envio = (Envio)dgvCatalogoEnvios.Rows[rowIndex].Tag;
+
+                    // Verifica si el producto fue encontrado
+                    if (envio != null)
+                    {
+                        Envio.Eliminar(envio);
+                        Cargar_Envios();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se encontró el producto.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Por favor, seleccione una celda para editar.");
+                }
+            }
+        }
+
+        private void dgvCatalogoEnvios_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvCatalogoEnvios.Columns[e.ColumnIndex].Name == "Estado_Envio" && e.Value != null)
+            {
+                string estado = e.Value.ToString();
+                switch (estado)
+                {
+                    case "En camino":
+                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.FromArgb(23, 47, 122);
+                        break;
+                    case "Cancelado":
+                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.FromArgb(134, 25, 40);
+                        break;
+                    case "Entregado":
+                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.FromArgb(20, 93, 24);
+                        break;
+                    default:
+                        e.CellStyle.ForeColor = Color.White;
+                        e.CellStyle.BackColor = Color.FromArgb(112, 123, 124);
+                        break;
+                }
+            }
         }
     }
 }

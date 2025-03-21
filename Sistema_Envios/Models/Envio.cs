@@ -20,6 +20,8 @@ namespace Sistema_Envios.Models
         public string Estado_Envio { get; set; }
         public string Numero_Guia { get; set; }
 
+        public string Direccion { get; set; }
+
         public static response AgregarEnvio(Envio envio)
         {
             var parametros = new List<Parametro>
@@ -55,6 +57,29 @@ namespace Sistema_Envios.Models
             };
             return Repositorio.EjecutarProcedimiento("sp_ActualizarEstadoEnvio", parametros);
 
+
+        }
+        public static response Actuzalizar(Envio envio)
+        {
+            var parametros = new List<Parametro>
+            {
+                new Parametro("@ID_Envio",envio.ID_Envio, SqlDbType.Int),
+                new Parametro("@ID_Vehiculo",envio.ID_Vehiculo, SqlDbType.Int),
+                new Parametro("@ID_Empleado",envio.ID_Empleado, SqlDbType.Int),
+                new Parametro("@Fecha_Estimada_Entrega", (object)envio.Fecha_Estimada_Entrega ?? DBNull.Value, SqlDbType.Date)
+
+            };
+            return Repositorio.EjecutarProcedimiento("ActualizarChoferYVehiculoEnvio", parametros);
+
+        }
+        public static response Eliminar(Envio envio)
+        {
+            var parametros = new List<Parametro>
+            {
+                new Parametro("@ID_Envio",envio.ID_Envio, SqlDbType.Int)
+
+            };
+            return Repositorio.EjecutarProcedimiento("DeleteAtEnvio", parametros);
 
         }
     }

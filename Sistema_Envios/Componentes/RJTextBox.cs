@@ -123,7 +123,18 @@ namespace Sistema_Envios.Componentes
             get { return borderFocusColor; }
             set { borderFocusColor = value; }
         }
-
+        [Category("RJ Code Advance")]
+        public bool ReadOnly
+        {
+            get { return textBox1.ReadOnly; }
+            set { textBox1.ReadOnly = value; }
+        }
+        [Category("RJ Code Advance")]
+        public HorizontalAlignment TextAling
+        {
+            get { return textBox1.TextAlign; }
+            set { textBox1.TextAlign = value; }
+        }
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);
