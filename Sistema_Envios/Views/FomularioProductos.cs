@@ -42,8 +42,22 @@ namespace Sistema_Envios.Views
 
         private void CargarProductos()
         {
-            string consulta = "select P.Nombre as Nombre, P.Descripcion, P.Dimensiones, P.Precio, P.stock, A.Nombre as Almacen, A.ID_Almacen,P.ID_Producto FROM Producto P " +
-                              "inner join Almacen A on P.ID_Almacen = A.ID_Almacen";
+            string consulta = @"
+                 SELECT 
+                 P.Nombre AS Nombre, 
+                  P.Descripcion, 
+                P.Dimensiones, 
+                P.Precio, 
+                P.stock, 
+                A.Nombre AS Almacen, 
+                A.ID_Almacen, 
+                P.ID_Producto 
+                FROM 
+                Producto P 
+                INNER JOIN 
+                Almacen A ON P.ID_Almacen = A.ID_Almacen 
+                WHERE 
+                P.delete_at IS NULL;";
             DataTable dt = _repositorio.EjecutarConsulta(consulta);
             dgvProductosCatalogo.Rows.Clear();
 

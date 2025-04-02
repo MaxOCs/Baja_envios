@@ -16,6 +16,7 @@ namespace Sistema_Envios.Views.Modales
     {
         private ProductosServices producto_services;
         public int id_producto;
+        private int _stockDisponible;
         public class ProductoSeleccionado
         {
             public int id { get; set; }
@@ -69,23 +70,29 @@ namespace Sistema_Envios.Views.Modales
 
         private void BtnAgregar_Click(object sender, EventArgs e)
         {
-            if(nudCantidad.Value > 0 && txtNombreProducto.Texts != "")
+            if (nudCantidad.Value > 0 && txtNombreProducto.Texts != "")
             {
+                if (nudCantidad.Value > _stockDisponible)
+                {
+                    MessageBox.Show($"No hay suficiente stock disponible. Stock actual: {_stockDisponible}");
+                    return;
+                }
+
                 Producto = new ProductoSeleccionado
                 {
                     id = id_producto,
                     Nombre = txtNombreProducto.Texts,
                     Precio = Convert.ToDecimal(txtPrecio.Texts),
-                    Cantidad = Convert.ToInt32(nudCantidad.Value)
+                    Cantidad = Convert.ToInt32(nudCantidad.Value),
                 };
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
             else
             {
-                MessageBox.Show("Selecione un concepto");
+                MessageBox.Show("Seleccione un producto y una cantidad válida");
             }
-            
+
         }
 
         private void LbProductos_SelectedIndexChanged(object sender, EventArgs e)
@@ -97,6 +104,9 @@ namespace Sistema_Envios.Views.Modales
                 txtNombreProducto.Texts = producto.Nombre.ToString();
                 txtPrecio.Texts = producto.Precio.ToString();
                 id_producto = producto.ID_Producto;
+                _stockDisponible = producto.stock;
+                nudCantidad.Maximum = _stockDisponible;
+                nudCantidad.Value = 1;
                 LbProductos.Visible = false;
             }
         }

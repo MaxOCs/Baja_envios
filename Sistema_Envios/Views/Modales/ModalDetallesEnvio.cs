@@ -143,8 +143,8 @@ namespace Sistema_Envios.Views.Modales
             Envio envio = new Envio
             {
                 ID_Envio = this.Envio.ID_Envio,
-                ID_Vehiculo = this.Envio.ID_Vehiculo,
-                ID_Empleado = this.Envio.ID_Empleado,
+                ID_Vehiculo = Convert.ToInt16(cbVehiculos.SelectedValue),
+                ID_Empleado = Convert.ToInt32(cbEmpleados.SelectedValue),
             };
 
             // Llamar al método para actualizar

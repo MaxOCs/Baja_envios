@@ -32,7 +32,7 @@ namespace Sistema_Envios.Data
         {
             Producto producto = null;
 
-            string sqlQuery = "SELECT P.ID_Producto , P.Nombre as Producto, P.Precio from Producto P WHERE P.Nombre = @nombre";
+            string sqlQuery = "SELECT P.ID_Producto , P.Nombre as Producto, P.Precio ,P.stock from Producto P WHERE P.Nombre = @nombre";
 
             using (SqlCommand cmd = new SqlCommand(sqlQuery, _cone.AbrirConexion()))
             {
@@ -49,6 +49,7 @@ namespace Sistema_Envios.Data
                                 ID_Producto = reader.GetInt32(0),
                                 Nombre = reader.GetString(1),
                                 Precio = reader.GetDecimal(2),
+                                stock = reader.GetInt32(3),
                             };
                         }
                     }
@@ -67,7 +68,7 @@ namespace Sistema_Envios.Data
         {
             var productos = new List<Producto>();
             // Consulta SQL para buscar clientes
-            string sqlQuery = "SELECT P.ID_Producto , P.Nombre as Producto, P.Precio from Producto P WHERE P.Nombre LIKE @query";
+            string sqlQuery = "SELECT P.ID_Producto , P.Nombre as Producto, P.Precio,P.stock from Producto P WHERE P.Nombre LIKE @query";
 
             using (SqlCommand cmd = new SqlCommand(sqlQuery, _cone.AbrirConexion()))
             {
@@ -85,6 +86,7 @@ namespace Sistema_Envios.Data
                                 ID_Producto = reader.GetInt32(0),
                                 Nombre = reader.GetString(1),
                                 Precio = reader.GetDecimal(2),
+                                stock =reader.GetInt32(3),
 
                             };
                             productos.Add(producto);
